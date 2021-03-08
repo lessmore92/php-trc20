@@ -1,0 +1,25 @@
+{
+  "name": "lessmore92/php-trc20",
+  "description": "This library provides simple way to interact with Tron TRC20 token.",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Lessmore92",
+      "email": "bahramisoft@gmail.com"
+    }
+  ],
+  "require": {
+    "iexbase/tron-api": "^3.1",
+    "google/protobuf": "^3.15"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Lessmore92\\Tron\\": "src",
+      "": "src/protobuf"
+    },
+    "files": [
+      "src/utils.php"
+    ]
+  }
+}
