@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\Inventory\InventoryType instead.
      * @deprecated
      */
-    class Inventory_InventoryType
-    {
-    }
+    class Inventory_InventoryType {}
 }
 class_exists(Inventory\InventoryType::class);
 @trigger_error('Protocol\Inventory_InventoryType is deprecated and will be removed in the next major release. Use Protocol\Inventory\InventoryType instead', E_USER_DEPRECATED);

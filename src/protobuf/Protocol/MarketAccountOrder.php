@@ -18,6 +18,12 @@ class MarketAccountOrder extends \Google\Protobuf\Internal\Message
      */
     protected $owner_address = '';
     /**
+     * order_id list
+     *
+     * Generated from protobuf field <code>repeated bytes orders = 2;</code>
+     */
+    private $orders;
+    /**
      * active count
      *
      * Generated from protobuf field <code>int64 count = 3;</code>
@@ -27,12 +33,6 @@ class MarketAccountOrder extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 total_count = 4;</code>
      */
     protected $total_count = 0;
-    /**
-     * order_id list
-     *
-     * Generated from protobuf field <code>repeated bytes orders = 2;</code>
-     */
-    private $orders;
 
     /**
      * Constructor.
@@ -40,16 +40,15 @@ class MarketAccountOrder extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
-     * @type string[]|\Google\Protobuf\Internal\RepeatedField $orders
+     *     @type string $owner_address
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $orders
      *           order_id list
-     * @type int|string $count
+     *     @type int|string $count
      *           active count
-     * @type int|string $total_count
+     *     @type int|string $total_count
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -96,7 +95,7 @@ class MarketAccountOrder extends \Google\Protobuf\Internal\Message
      */
     public function setOrders($var)
     {
-        $arr          = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->orders = $arr;
 
         return $this;

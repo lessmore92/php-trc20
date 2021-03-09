@@ -8,37 +8,30 @@ class StorageContract
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
+    public static function initOnce() {
         $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
-        if (static::$is_initialized == true)
-        {
-            return;
+        if (static::$is_initialized == true) {
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+†
 $core/contract/storage_contract.protoprotocol"?
 BuyStorageBytesContract
-
-owner_address (
+owner_address (
 bytes (":
 BuyStorageContract
-
-owner_address (
+owner_address (
 quant ("C
 SellStorageContract
-
-owner_address (
-
-storage_bytes ("C
+owner_address (
+storage_bytes ("C
 UpdateBrokerageContract
-
-owner_address (
+owner_address (
 	brokerage (BE
 org.tron.protos.contractZ)github.com/tronprotocol/grpc-gateway/corebproto3'
-            , true);
+        , true);
 
         static::$is_initialized = true;
     }

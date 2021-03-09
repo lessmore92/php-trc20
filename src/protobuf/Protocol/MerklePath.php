@@ -14,10 +14,6 @@ use Google\Protobuf\Internal\GPBUtil;
 class MerklePath extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>bytes rt = 3;</code>
-     */
-    protected $rt = '';
-    /**
      * Generated from protobuf field <code>repeated .protocol.AuthenticationPath authentication_paths = 1;</code>
      */
     private $authentication_paths;
@@ -25,6 +21,10 @@ class MerklePath extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated bool index = 2;</code>
      */
     private $index;
+    /**
+     * Generated from protobuf field <code>bytes rt = 3;</code>
+     */
+    protected $rt = '';
 
     /**
      * Constructor.
@@ -32,13 +32,12 @@ class MerklePath extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\AuthenticationPath[]|\Google\Protobuf\Internal\RepeatedField $authentication_paths
-     * @type bool[]|\Google\Protobuf\Internal\RepeatedField $index
-     * @type string $rt
+     *     @type \Protocol\AuthenticationPath[]|\Google\Protobuf\Internal\RepeatedField $authentication_paths
+     *     @type bool[]|\Google\Protobuf\Internal\RepeatedField $index
+     *     @type string $rt
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\ShieldContract::initOnce();
         parent::__construct($data);
     }
@@ -59,7 +58,7 @@ class MerklePath extends \Google\Protobuf\Internal\Message
      */
     public function setAuthenticationPaths($var)
     {
-        $arr                        = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\AuthenticationPath::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\AuthenticationPath::class);
         $this->authentication_paths = $arr;
 
         return $this;
@@ -81,7 +80,7 @@ class MerklePath extends \Google\Protobuf\Internal\Message
      */
     public function setIndex($var)
     {
-        $arr         = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BOOL);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BOOL);
         $this->index = $arr;
 
         return $this;

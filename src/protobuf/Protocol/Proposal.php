@@ -24,6 +24,10 @@ class Proposal extends \Google\Protobuf\Internal\Message
      */
     protected $proposer_address = '';
     /**
+     * Generated from protobuf field <code>map<int64, int64> parameters = 3;</code>
+     */
+    private $parameters;
+    /**
      * Generated from protobuf field <code>int64 expiration_time = 4;</code>
      */
     protected $expiration_time = 0;
@@ -32,17 +36,13 @@ class Proposal extends \Google\Protobuf\Internal\Message
      */
     protected $create_time = 0;
     /**
-     * Generated from protobuf field <code>.protocol.Proposal.State state = 7;</code>
-     */
-    protected $state = 0;
-    /**
-     * Generated from protobuf field <code>map<int64, int64> parameters = 3;</code>
-     */
-    private $parameters;
-    /**
      * Generated from protobuf field <code>repeated bytes approvals = 6;</code>
      */
     private $approvals;
+    /**
+     * Generated from protobuf field <code>.protocol.Proposal.State state = 7;</code>
+     */
+    protected $state = 0;
 
     /**
      * Constructor.
@@ -50,17 +50,16 @@ class Proposal extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int|string $proposal_id
-     * @type string $proposer_address
-     * @type array|\Google\Protobuf\Internal\MapField $parameters
-     * @type int|string $expiration_time
-     * @type int|string $create_time
-     * @type string[]|\Google\Protobuf\Internal\RepeatedField $approvals
-     * @type int $state
+     *     @type int|string $proposal_id
+     *     @type string $proposer_address
+     *     @type array|\Google\Protobuf\Internal\MapField $parameters
+     *     @type int|string $expiration_time
+     *     @type int|string $create_time
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $approvals
+     *     @type int $state
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -125,7 +124,7 @@ class Proposal extends \Google\Protobuf\Internal\Message
      */
     public function setParameters($var)
     {
-        $arr              = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::INT64, \Google\Protobuf\Internal\GPBType::INT64);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::INT64, \Google\Protobuf\Internal\GPBType::INT64);
         $this->parameters = $arr;
 
         return $this;
@@ -191,7 +190,7 @@ class Proposal extends \Google\Protobuf\Internal\Message
      */
     public function setApprovals($var)
     {
-        $arr             = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->approvals = $arr;
 
         return $this;

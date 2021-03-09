@@ -24,11 +24,10 @@ class ABI extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\SmartContract\ABI\Entry[]|\Google\Protobuf\Internal\RepeatedField $entrys
+     *     @type \Protocol\SmartContract\ABI\Entry[]|\Google\Protobuf\Internal\RepeatedField $entrys
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\SmartContract::initOnce();
         parent::__construct($data);
     }
@@ -49,7 +48,7 @@ class ABI extends \Google\Protobuf\Internal\Message
      */
     public function setEntrys($var)
     {
-        $arr          = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\SmartContract\ABI\Entry::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\SmartContract\ABI\Entry::class);
         $this->entrys = $arr;
 
         return $this;

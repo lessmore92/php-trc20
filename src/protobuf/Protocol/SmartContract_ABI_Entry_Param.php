@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\SmartContract\ABI\Entry\Param instead.
      * @deprecated
      */
-    class SmartContract_ABI_Entry_Param
-    {
-    }
+    class SmartContract_ABI_Entry_Param {}
 }
 class_exists(SmartContract\ABI\Entry\Param::class);
 @trigger_error('Protocol\SmartContract_ABI_Entry_Param is deprecated and will be removed in the next major release. Use Protocol\SmartContract\ABI\Entry\Param instead', E_USER_DEPRECATED);

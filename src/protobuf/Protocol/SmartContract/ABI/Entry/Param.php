@@ -34,14 +34,13 @@ class Param extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type bool $indexed
-     * @type string $name
-     * @type string $type
+     *     @type bool $indexed
+     *     @type string $name
+     *     @type string $type
      *           SolidityType type = 3;
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\SmartContract::initOnce();
         parent::__construct($data);
     }

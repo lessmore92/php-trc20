@@ -26,11 +26,10 @@ class DynamicProperties extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int|string $last_solidity_block_num
+     *     @type int|string $last_solidity_block_num
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }

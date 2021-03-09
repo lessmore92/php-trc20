@@ -24,11 +24,10 @@ class WithdrawBalanceContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
+     *     @type string $owner_address
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\BalanceContract::initOnce();
         parent::__construct($data);
     }

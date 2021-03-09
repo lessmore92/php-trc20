@@ -32,13 +32,12 @@ class MarketPriceList extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $sell_token_id
-     * @type string $buy_token_id
-     * @type \Protocol\MarketPrice[]|\Google\Protobuf\Internal\RepeatedField $prices
+     *     @type string $sell_token_id
+     *     @type string $buy_token_id
+     *     @type \Protocol\MarketPrice[]|\Google\Protobuf\Internal\RepeatedField $prices
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -103,7 +102,7 @@ class MarketPriceList extends \Google\Protobuf\Internal\Message
      */
     public function setPrices($var)
     {
-        $arr          = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\MarketPrice::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\MarketPrice::class);
         $this->prices = $arr;
 
         return $this;

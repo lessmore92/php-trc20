@@ -16,13 +16,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class Block extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>.protocol.BlockHeader block_header = 2;</code>
-     */
-    protected $block_header = null;
-    /**
      * Generated from protobuf field <code>repeated .protocol.Transaction transactions = 1;</code>
      */
     private $transactions;
+    /**
+     * Generated from protobuf field <code>.protocol.BlockHeader block_header = 2;</code>
+     */
+    protected $block_header = null;
 
     /**
      * Constructor.
@@ -30,12 +30,11 @@ class Block extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\Transaction[]|\Google\Protobuf\Internal\RepeatedField $transactions
-     * @type \Protocol\BlockHeader $block_header
+     *     @type \Protocol\Transaction[]|\Google\Protobuf\Internal\RepeatedField $transactions
+     *     @type \Protocol\BlockHeader $block_header
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +55,7 @@ class Block extends \Google\Protobuf\Internal\Message
      */
     public function setTransactions($var)
     {
-        $arr                = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Transaction::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Transaction::class);
         $this->transactions = $arr;
 
         return $this;
@@ -71,6 +70,16 @@ class Block extends \Google\Protobuf\Internal\Message
         return isset($this->block_header) ? $this->block_header : null;
     }
 
+    public function hasBlockHeader()
+    {
+        return isset($this->block_header);
+    }
+
+    public function clearBlockHeader()
+    {
+        unset($this->block_header);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.BlockHeader block_header = 2;</code>
      * @param \Protocol\BlockHeader $var
@@ -82,16 +91,6 @@ class Block extends \Google\Protobuf\Internal\Message
         $this->block_header = $var;
 
         return $this;
-    }
-
-    public function hasBlockHeader()
-    {
-        return isset($this->block_header);
-    }
-
-    public function clearBlockHeader()
-    {
-        unset($this->block_header);
     }
 
 }

@@ -16,13 +16,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class BlockInventory extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>.protocol.BlockInventory.Type type = 2;</code>
-     */
-    protected $type = 0;
-    /**
      * Generated from protobuf field <code>repeated .protocol.BlockInventory.BlockId ids = 1;</code>
      */
     private $ids;
+    /**
+     * Generated from protobuf field <code>.protocol.BlockInventory.Type type = 2;</code>
+     */
+    protected $type = 0;
 
     /**
      * Constructor.
@@ -30,12 +30,11 @@ class BlockInventory extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\BlockInventory\BlockId[]|\Google\Protobuf\Internal\RepeatedField $ids
-     * @type int $type
+     *     @type \Protocol\BlockInventory\BlockId[]|\Google\Protobuf\Internal\RepeatedField $ids
+     *     @type int $type
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +55,7 @@ class BlockInventory extends \Google\Protobuf\Internal\Message
      */
     public function setIds($var)
     {
-        $arr       = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\BlockInventory\BlockId::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\BlockInventory\BlockId::class);
         $this->ids = $arr;
 
         return $this;

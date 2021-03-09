@@ -24,6 +24,14 @@ class ShieldedTransferContract extends \Google\Protobuf\Internal\Message
      */
     protected $from_amount = 0;
     /**
+     * Generated from protobuf field <code>repeated .protocol.SpendDescription spend_description = 3;</code>
+     */
+    private $spend_description;
+    /**
+     * Generated from protobuf field <code>repeated .protocol.ReceiveDescription receive_description = 4;</code>
+     */
+    private $receive_description;
+    /**
      * Generated from protobuf field <code>bytes binding_signature = 5;</code>
      */
     protected $binding_signature = '';
@@ -39,14 +47,6 @@ class ShieldedTransferContract extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 to_amount = 7;</code>
      */
     protected $to_amount = 0;
-    /**
-     * Generated from protobuf field <code>repeated .protocol.SpendDescription spend_description = 3;</code>
-     */
-    private $spend_description;
-    /**
-     * Generated from protobuf field <code>repeated .protocol.ReceiveDescription receive_description = 4;</code>
-     */
-    private $receive_description;
 
     /**
      * Constructor.
@@ -54,20 +54,19 @@ class ShieldedTransferContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $transparent_from_address
+     *     @type string $transparent_from_address
      *           transparent address
-     * @type int|string $from_amount
-     * @type \Protocol\SpendDescription[]|\Google\Protobuf\Internal\RepeatedField $spend_description
-     * @type \Protocol\ReceiveDescription[]|\Google\Protobuf\Internal\RepeatedField $receive_description
-     * @type string $binding_signature
-     * @type string $transparent_to_address
+     *     @type int|string $from_amount
+     *     @type \Protocol\SpendDescription[]|\Google\Protobuf\Internal\RepeatedField $spend_description
+     *     @type \Protocol\ReceiveDescription[]|\Google\Protobuf\Internal\RepeatedField $receive_description
+     *     @type string $binding_signature
+     *     @type string $transparent_to_address
      *           transparent address
-     * @type int|string $to_amount
+     *     @type int|string $to_amount
      *           the amount to transparent to_address
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\ShieldContract::initOnce();
         parent::__construct($data);
     }
@@ -136,7 +135,7 @@ class ShieldedTransferContract extends \Google\Protobuf\Internal\Message
      */
     public function setSpendDescription($var)
     {
-        $arr                     = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\SpendDescription::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\SpendDescription::class);
         $this->spend_description = $arr;
 
         return $this;
@@ -158,7 +157,7 @@ class ShieldedTransferContract extends \Google\Protobuf\Internal\Message
      */
     public function setReceiveDescription($var)
     {
-        $arr                       = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\ReceiveDescription::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\ReceiveDescription::class);
         $this->receive_description = $arr;
 
         return $this;

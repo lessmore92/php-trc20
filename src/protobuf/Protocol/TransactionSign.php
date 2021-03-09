@@ -28,12 +28,11 @@ class TransactionSign extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\Transaction $transaction
-     * @type string $privateKey
+     *     @type \Protocol\Transaction $transaction
+     *     @type string $privateKey
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -47,6 +46,16 @@ class TransactionSign extends \Google\Protobuf\Internal\Message
         return isset($this->transaction) ? $this->transaction : null;
     }
 
+    public function hasTransaction()
+    {
+        return isset($this->transaction);
+    }
+
+    public function clearTransaction()
+    {
+        unset($this->transaction);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.Transaction transaction = 1;</code>
      * @param \Protocol\Transaction $var
@@ -58,16 +67,6 @@ class TransactionSign extends \Google\Protobuf\Internal\Message
         $this->transaction = $var;
 
         return $this;
-    }
-
-    public function hasTransaction()
-    {
-        return isset($this->transaction);
-    }
-
-    public function clearTransaction()
-    {
-        unset($this->transaction);
     }
 
     /**

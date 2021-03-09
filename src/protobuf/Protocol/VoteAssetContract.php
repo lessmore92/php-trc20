@@ -18,6 +18,10 @@ class VoteAssetContract extends \Google\Protobuf\Internal\Message
      */
     protected $owner_address = '';
     /**
+     * Generated from protobuf field <code>repeated bytes vote_address = 2;</code>
+     */
+    private $vote_address;
+    /**
      * Generated from protobuf field <code>bool support = 3;</code>
      */
     protected $support = false;
@@ -25,10 +29,6 @@ class VoteAssetContract extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int32 count = 5;</code>
      */
     protected $count = 0;
-    /**
-     * Generated from protobuf field <code>repeated bytes vote_address = 2;</code>
-     */
-    private $vote_address;
 
     /**
      * Constructor.
@@ -36,14 +36,13 @@ class VoteAssetContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
-     * @type string[]|\Google\Protobuf\Internal\RepeatedField $vote_address
-     * @type bool $support
-     * @type int $count
+     *     @type string $owner_address
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $vote_address
+     *     @type bool $support
+     *     @type int $count
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\VoteAssetContract::initOnce();
         parent::__construct($data);
     }
@@ -86,7 +85,7 @@ class VoteAssetContract extends \Google\Protobuf\Internal\Message
      */
     public function setVoteAddress($var)
     {
-        $arr                = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->vote_address = $arr;
 
         return $this;

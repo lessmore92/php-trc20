@@ -48,17 +48,16 @@ class DeadLockThreadInfo extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $name
-     * @type string $lockName
-     * @type string $lockOwner
-     * @type string $state
-     * @type int|string $blockTime
-     * @type int|string $waitTime
-     * @type string $stackTrace
+     *     @type string $name
+     *     @type string $lockName
+     *     @type string $lockOwner
+     *     @type string $state
+     *     @type int|string $blockTime
+     *     @type int|string $waitTime
+     *     @type string $stackTrace
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }

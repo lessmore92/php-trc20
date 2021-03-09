@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\NodeInfo\PeerInfo instead.
      * @deprecated
      */
-    class NodeInfo_PeerInfo
-    {
-    }
+    class NodeInfo_PeerInfo {}
 }
 class_exists(NodeInfo\PeerInfo::class);
 @trigger_error('Protocol\NodeInfo_PeerInfo is deprecated and will be removed in the next major release. Use Protocol\NodeInfo\PeerInfo instead', E_USER_DEPRECATED);

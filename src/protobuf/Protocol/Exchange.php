@@ -50,17 +50,16 @@ class Exchange extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int|string $exchange_id
-     * @type string $creator_address
-     * @type int|string $create_time
-     * @type string $first_token_id
-     * @type int|string $first_token_balance
-     * @type string $second_token_id
-     * @type int|string $second_token_balance
+     *     @type int|string $exchange_id
+     *     @type string $creator_address
+     *     @type int|string $create_time
+     *     @type string $first_token_id
+     *     @type int|string $first_token_balance
+     *     @type string $second_token_id
+     *     @type int|string $second_token_balance
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }

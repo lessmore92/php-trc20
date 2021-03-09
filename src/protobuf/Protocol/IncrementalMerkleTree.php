@@ -32,13 +32,12 @@ class IncrementalMerkleTree extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\PedersenHash $left
-     * @type \Protocol\PedersenHash $right
-     * @type \Protocol\PedersenHash[]|\Google\Protobuf\Internal\RepeatedField $parents
+     *     @type \Protocol\PedersenHash $left
+     *     @type \Protocol\PedersenHash $right
+     *     @type \Protocol\PedersenHash[]|\Google\Protobuf\Internal\RepeatedField $parents
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\ShieldContract::initOnce();
         parent::__construct($data);
     }
@@ -50,6 +49,16 @@ class IncrementalMerkleTree extends \Google\Protobuf\Internal\Message
     public function getLeft()
     {
         return isset($this->left) ? $this->left : null;
+    }
+
+    public function hasLeft()
+    {
+        return isset($this->left);
+    }
+
+    public function clearLeft()
+    {
+        unset($this->left);
     }
 
     /**
@@ -65,16 +74,6 @@ class IncrementalMerkleTree extends \Google\Protobuf\Internal\Message
         return $this;
     }
 
-    public function hasLeft()
-    {
-        return isset($this->left);
-    }
-
-    public function clearLeft()
-    {
-        unset($this->left);
-    }
-
     /**
      * Generated from protobuf field <code>.protocol.PedersenHash right = 2;</code>
      * @return \Protocol\PedersenHash
@@ -82,6 +81,16 @@ class IncrementalMerkleTree extends \Google\Protobuf\Internal\Message
     public function getRight()
     {
         return isset($this->right) ? $this->right : null;
+    }
+
+    public function hasRight()
+    {
+        return isset($this->right);
+    }
+
+    public function clearRight()
+    {
+        unset($this->right);
     }
 
     /**
@@ -95,16 +104,6 @@ class IncrementalMerkleTree extends \Google\Protobuf\Internal\Message
         $this->right = $var;
 
         return $this;
-    }
-
-    public function hasRight()
-    {
-        return isset($this->right);
-    }
-
-    public function clearRight()
-    {
-        unset($this->right);
     }
 
     /**
@@ -123,7 +122,7 @@ class IncrementalMerkleTree extends \Google\Protobuf\Internal\Message
      */
     public function setParents($var)
     {
-        $arr           = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\PedersenHash::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\PedersenHash::class);
         $this->parents = $arr;
 
         return $this;

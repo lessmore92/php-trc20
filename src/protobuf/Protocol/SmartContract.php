@@ -60,20 +60,19 @@ class SmartContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $origin_address
-     * @type string $contract_address
-     * @type \Protocol\SmartContract\ABI $abi
-     * @type string $bytecode
-     * @type int|string $call_value
-     * @type int|string $consume_user_resource_percent
-     * @type string $name
-     * @type int|string $origin_energy_limit
-     * @type string $code_hash
-     * @type string $trx_hash
+     *     @type string $origin_address
+     *     @type string $contract_address
+     *     @type \Protocol\SmartContract\ABI $abi
+     *     @type string $bytecode
+     *     @type int|string $call_value
+     *     @type int|string $consume_user_resource_percent
+     *     @type string $name
+     *     @type int|string $origin_energy_limit
+     *     @type string $code_hash
+     *     @type string $trx_hash
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\SmartContract::initOnce();
         parent::__construct($data);
     }
@@ -131,6 +130,16 @@ class SmartContract extends \Google\Protobuf\Internal\Message
         return isset($this->abi) ? $this->abi : null;
     }
 
+    public function hasAbi()
+    {
+        return isset($this->abi);
+    }
+
+    public function clearAbi()
+    {
+        unset($this->abi);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.SmartContract.ABI abi = 3;</code>
      * @param \Protocol\SmartContract\ABI $var
@@ -142,16 +151,6 @@ class SmartContract extends \Google\Protobuf\Internal\Message
         $this->abi = $var;
 
         return $this;
-    }
-
-    public function hasAbi()
-    {
-        return isset($this->abi);
-    }
-
-    public function clearAbi()
-    {
-        unset($this->abi);
     }
 
     /**

@@ -120,35 +120,34 @@ class PeerInfo extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $lastSyncBlock
-     * @type int|string $remainNum
-     * @type int|string $lastBlockUpdateTime
-     * @type bool $syncFlag
-     * @type int|string $headBlockTimeWeBothHave
-     * @type bool $needSyncFromPeer
-     * @type bool $needSyncFromUs
-     * @type string $host
-     * @type int $port
-     * @type string $nodeId
-     * @type int|string $connectTime
-     * @type float $avgLatency
-     * @type int $syncToFetchSize
-     * @type int|string $syncToFetchSizePeekNum
-     * @type int $syncBlockRequestedSize
-     * @type int|string $unFetchSynNum
-     * @type int $blockInPorcSize
-     * @type string $headBlockWeBothHave
-     * @type bool $isActive
-     * @type int $score
-     * @type int $nodeCount
-     * @type int|string $inFlow
-     * @type int $disconnectTimes
-     * @type string $localDisconnectReason
-     * @type string $remoteDisconnectReason
+     *     @type string $lastSyncBlock
+     *     @type int|string $remainNum
+     *     @type int|string $lastBlockUpdateTime
+     *     @type bool $syncFlag
+     *     @type int|string $headBlockTimeWeBothHave
+     *     @type bool $needSyncFromPeer
+     *     @type bool $needSyncFromUs
+     *     @type string $host
+     *     @type int $port
+     *     @type string $nodeId
+     *     @type int|string $connectTime
+     *     @type float $avgLatency
+     *     @type int $syncToFetchSize
+     *     @type int|string $syncToFetchSizePeekNum
+     *     @type int $syncBlockRequestedSize
+     *     @type int|string $unFetchSynNum
+     *     @type int $blockInPorcSize
+     *     @type string $headBlockWeBothHave
+     *     @type bool $isActive
+     *     @type int $score
+     *     @type int $nodeCount
+     *     @type int|string $inFlow
+     *     @type int $disconnectTimes
+     *     @type string $localDisconnectReason
+     *     @type string $remoteDisconnectReason
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }

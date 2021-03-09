@@ -24,11 +24,10 @@ class ChainParameters extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\ChainParameters\ChainParameter[]|\Google\Protobuf\Internal\RepeatedField $chainParameter
+     *     @type \Protocol\ChainParameters\ChainParameter[]|\Google\Protobuf\Internal\RepeatedField $chainParameter
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -49,7 +48,7 @@ class ChainParameters extends \Google\Protobuf\Internal\Message
      */
     public function setChainParameter($var)
     {
-        $arr                  = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\ChainParameters\ChainParameter::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\ChainParameters\ChainParameter::class);
         $this->chainParameter = $arr;
 
         return $this;

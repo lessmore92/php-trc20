@@ -34,14 +34,13 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\Transaction\raw $raw_data
-     * @type string[]|\Google\Protobuf\Internal\RepeatedField $signature
+     *     @type \Protocol\Transaction\raw $raw_data
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $signature
      *           only support size = 1, repeated list here for muti-sig extension
-     * @type \Protocol\Transaction\Result[]|\Google\Protobuf\Internal\RepeatedField $ret
+     *     @type \Protocol\Transaction\Result[]|\Google\Protobuf\Internal\RepeatedField $ret
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -55,6 +54,16 @@ class Transaction extends \Google\Protobuf\Internal\Message
         return isset($this->raw_data) ? $this->raw_data : null;
     }
 
+    public function hasRawData()
+    {
+        return isset($this->raw_data);
+    }
+
+    public function clearRawData()
+    {
+        unset($this->raw_data);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.Transaction.raw raw_data = 1;</code>
      * @param \Protocol\Transaction\raw $var
@@ -66,16 +75,6 @@ class Transaction extends \Google\Protobuf\Internal\Message
         $this->raw_data = $var;
 
         return $this;
-    }
-
-    public function hasRawData()
-    {
-        return isset($this->raw_data);
-    }
-
-    public function clearRawData()
-    {
-        unset($this->raw_data);
     }
 
     /**
@@ -98,7 +97,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     public function setSignature($var)
     {
-        $arr             = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->signature = $arr;
 
         return $this;
@@ -120,7 +119,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     public function setRet($var)
     {
-        $arr       = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Transaction\Result::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Transaction\Result::class);
         $this->ret = $arr;
 
         return $this;

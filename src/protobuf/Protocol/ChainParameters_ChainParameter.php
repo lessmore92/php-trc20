@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\ChainParameters\ChainParameter instead.
      * @deprecated
      */
-    class ChainParameters_ChainParameter
-    {
-    }
+    class ChainParameters_ChainParameter {}
 }
 class_exists(ChainParameters\ChainParameter::class);
 @trigger_error('Protocol\ChainParameters_ChainParameter is deprecated and will be removed in the next major release. Use Protocol\ChainParameters\ChainParameter instead', E_USER_DEPRECATED);

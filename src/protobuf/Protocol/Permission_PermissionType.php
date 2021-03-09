@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\Permission\PermissionType instead.
      * @deprecated
      */
-    class Permission_PermissionType
-    {
-    }
+    class Permission_PermissionType {}
 }
 class_exists(Permission\PermissionType::class);
 @trigger_error('Protocol\Permission_PermissionType is deprecated and will be removed in the next major release. Use Protocol\Permission\PermissionType instead', E_USER_DEPRECATED);

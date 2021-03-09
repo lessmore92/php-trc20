@@ -42,17 +42,16 @@ class AccountPermissionUpdateContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
-     * @type \Protocol\Permission $owner
+     *     @type string $owner_address
+     *     @type \Protocol\Permission $owner
      *          Empty is invalidate
-     * @type \Protocol\Permission $witness
+     *     @type \Protocol\Permission $witness
      *          Can be empty
-     * @type \Protocol\Permission[]|\Google\Protobuf\Internal\RepeatedField $actives
+     *     @type \Protocol\Permission[]|\Google\Protobuf\Internal\RepeatedField $actives
      *          Empty is invalidate
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\AccountContract::initOnce();
         parent::__construct($data);
     }
@@ -90,6 +89,16 @@ class AccountPermissionUpdateContract extends \Google\Protobuf\Internal\Message
         return isset($this->owner) ? $this->owner : null;
     }
 
+    public function hasOwner()
+    {
+        return isset($this->owner);
+    }
+
+    public function clearOwner()
+    {
+        unset($this->owner);
+    }
+
     /**
      *Empty is invalidate
      *
@@ -105,16 +114,6 @@ class AccountPermissionUpdateContract extends \Google\Protobuf\Internal\Message
         return $this;
     }
 
-    public function hasOwner()
-    {
-        return isset($this->owner);
-    }
-
-    public function clearOwner()
-    {
-        unset($this->owner);
-    }
-
     /**
      *Can be empty
      *
@@ -124,6 +123,16 @@ class AccountPermissionUpdateContract extends \Google\Protobuf\Internal\Message
     public function getWitness()
     {
         return isset($this->witness) ? $this->witness : null;
+    }
+
+    public function hasWitness()
+    {
+        return isset($this->witness);
+    }
+
+    public function clearWitness()
+    {
+        unset($this->witness);
     }
 
     /**
@@ -139,16 +148,6 @@ class AccountPermissionUpdateContract extends \Google\Protobuf\Internal\Message
         $this->witness = $var;
 
         return $this;
-    }
-
-    public function hasWitness()
-    {
-        return isset($this->witness);
-    }
-
-    public function clearWitness()
-    {
-        unset($this->witness);
     }
 
     /**
@@ -171,7 +170,7 @@ class AccountPermissionUpdateContract extends \Google\Protobuf\Internal\Message
      */
     public function setActives($var)
     {
-        $arr           = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Permission::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Permission::class);
         $this->actives = $arr;
 
         return $this;

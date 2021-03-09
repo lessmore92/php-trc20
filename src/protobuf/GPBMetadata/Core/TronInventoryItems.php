@@ -8,23 +8,21 @@ class TronInventoryItems
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
+    public static function initOnce() {
         $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
-        if (static::$is_initialized == true)
-        {
-            return;
+        if (static::$is_initialized == true) {
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+²
 core/TronInventoryItems.protoprotocol"-
 InventoryItems
 type (
 items (BP
 org.tron.protosBTronInventoryItemsZ)github.com/tronprotocol/grpc-gateway/corebproto3'
-            , true);
+        , true);
 
         static::$is_initialized = true;
     }

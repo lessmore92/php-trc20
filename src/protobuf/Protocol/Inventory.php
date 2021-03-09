@@ -28,12 +28,11 @@ class Inventory extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $type
-     * @type string[]|\Google\Protobuf\Internal\RepeatedField $ids
+     *     @type int $type
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $ids
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -76,7 +75,7 @@ class Inventory extends \Google\Protobuf\Internal\Message
      */
     public function setIds($var)
     {
-        $arr       = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->ids = $arr;
 
         return $this;

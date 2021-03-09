@@ -55,20 +55,19 @@ class raw extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int|string $timestamp
-     * @type string $txTrieRoot
-     * @type string $parentHash
-     * @type int|string $number
+     *     @type int|string $timestamp
+     *     @type string $txTrieRoot
+     *     @type string $parentHash
+     *     @type int|string $number
      *          bytes nonce = 5;
      *          bytes difficulty = 6;
-     * @type int|string $witness_id
-     * @type string $witness_address
-     * @type int $version
-     * @type string $accountStateRoot
+     *     @type int|string $witness_id
+     *     @type string $witness_address
+     *     @type int $version
+     *     @type string $accountStateRoot
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }

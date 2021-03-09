@@ -32,13 +32,12 @@ class FindNeighbours extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\Endpoint $from
-     * @type string $targetId
-     * @type int|string $timestamp
+     *     @type \Protocol\Endpoint $from
+     *     @type string $targetId
+     *     @type int|string $timestamp
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Discover::initOnce();
         parent::__construct($data);
     }
@@ -52,6 +51,16 @@ class FindNeighbours extends \Google\Protobuf\Internal\Message
         return isset($this->from) ? $this->from : null;
     }
 
+    public function hasFrom()
+    {
+        return isset($this->from);
+    }
+
+    public function clearFrom()
+    {
+        unset($this->from);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.Endpoint from = 1;</code>
      * @param \Protocol\Endpoint $var
@@ -63,16 +72,6 @@ class FindNeighbours extends \Google\Protobuf\Internal\Message
         $this->from = $var;
 
         return $this;
-    }
-
-    public function hasFrom()
-    {
-        return isset($this->from);
-    }
-
-    public function clearFrom()
-    {
-        unset($this->from);
     }
 
     /**

@@ -18,13 +18,13 @@ class Log extends \Google\Protobuf\Internal\Message
      */
     protected $address = '';
     /**
-     * Generated from protobuf field <code>bytes data = 3;</code>
-     */
-    protected $data = '';
-    /**
      * Generated from protobuf field <code>repeated bytes topics = 2;</code>
      */
     private $topics;
+    /**
+     * Generated from protobuf field <code>bytes data = 3;</code>
+     */
+    protected $data = '';
 
     /**
      * Constructor.
@@ -32,13 +32,12 @@ class Log extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $address
-     * @type string[]|\Google\Protobuf\Internal\RepeatedField $topics
-     * @type string $data
+     *     @type string $address
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $topics
+     *     @type string $data
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -81,7 +80,7 @@ class Log extends \Google\Protobuf\Internal\Message
      */
     public function setTopics($var)
     {
-        $arr          = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->topics = $arr;
 
         return $this;

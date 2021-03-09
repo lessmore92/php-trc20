@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\VoteWitnessContract\Vote instead.
      * @deprecated
      */
-    class VoteWitnessContract_Vote
-    {
-    }
+    class VoteWitnessContract_Vote {}
 }
 class_exists(VoteWitnessContract\Vote::class);
 @trigger_error('Protocol\VoteWitnessContract_Vote is deprecated and will be removed in the next major release. Use Protocol\VoteWitnessContract\Vote instead', E_USER_DEPRECATED);

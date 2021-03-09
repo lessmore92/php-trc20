@@ -8,44 +8,38 @@ class BalanceContract
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
+    public static function initOnce() {
         $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
-        if (static::$is_initialized == true)
-        {
-            return;
+        if (static::$is_initialized == true) {
+          return;
         }
         \GPBMetadata\Core\Contract\Common::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ï¿½
-$core/contract/balance_contract.protoprotocol"ï¿½
+œ
+$core/contract/balance_contract.protoprotocol"£
 FreezeBalanceContract
-
-owner_address (
+owner_address (
 frozen_balance (
 frozen_duration ((
 resource
  (2.protocol.ResourceCode
 receiver_address ("t
 UnfreezeBalanceContract
-
-owner_address ((
+owner_address ((
 resource
  (2.protocol.ResourceCode
 receiver_address ("0
 WithdrawBalanceContract
-
-owner_address ("M
+owner_address ("M
 TransferContract
-
-owner_address (
+owner_address (
 
 to_address (
 amount (BE
 org.tron.protos.contractZ)github.com/tronprotocol/grpc-gateway/corebproto3'
-            , true);
+        , true);
 
         static::$is_initialized = true;
     }

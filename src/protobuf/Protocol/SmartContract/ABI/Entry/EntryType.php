@@ -38,19 +38,18 @@ class EntryType
 
     private static $valueToName = [
         self::UnknownEntryType => 'UnknownEntryType',
-        self::Constructor      => 'Constructor',
-        self::PBFunction       => 'PBFunction',
-        self::Event            => 'Event',
-        self::Fallback         => 'Fallback',
-        self::Receive          => 'Receive',
+        self::Constructor => 'Constructor',
+        self::PBFunction => 'PBFunction',
+        self::Event => 'Event',
+        self::Fallback => 'Fallback',
+        self::Receive => 'Receive',
     ];
 
     public static function name($value)
     {
-        if (!isset(self::$valueToName[$value]))
-        {
+        if (!isset(self::$valueToName[$value])) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no name defined for value %s', __CLASS__, $value));
+                    'Enum %s has no name defined for value %s', __CLASS__, $value));
         }
         return self::$valueToName[$value];
     }
@@ -59,10 +58,9 @@ class EntryType
     public static function value($name)
     {
         $const = __CLASS__ . '::' . strtoupper($name);
-        if (!defined($const))
-        {
+        if (!defined($const)) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no value defined for name %s', __CLASS__, $name));
+                    'Enum %s has no value defined for name %s', __CLASS__, $name));
         }
         return constant($const);
     }

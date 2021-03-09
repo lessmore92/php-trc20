@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\BlockInventory\Type instead.
      * @deprecated
      */
-    class BlockInventory_Type
-    {
-    }
+    class BlockInventory_Type {}
 }
 class_exists(BlockInventory\Type::class);
 @trigger_error('Protocol\BlockInventory_Type is deprecated and will be removed in the next major release. Use Protocol\BlockInventory\Type instead', E_USER_DEPRECATED);

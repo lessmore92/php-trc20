@@ -28,12 +28,11 @@ class FrozenSupply extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int|string $frozen_amount
-     * @type int|string $frozen_days
+     *     @type int|string $frozen_amount
+     *     @type int|string $frozen_days
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\AssetIssueContract::initOnce();
         parent::__construct($data);
     }

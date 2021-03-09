@@ -40,16 +40,15 @@ class ParticipateAssetIssueContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
-     * @type string $to_address
-     * @type string $asset_name
+     *     @type string $owner_address
+     *     @type string $to_address
+     *     @type string $asset_name
      *           this field is token name before the proposal ALLOW_SAME_TOKEN_NAME is active, otherwise it is token id and token is should be in string format.
-     * @type int|string $amount
+     *     @type int|string $amount
      *           the amount of drops
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\AssetIssueContract::initOnce();
         parent::__construct($data);
     }

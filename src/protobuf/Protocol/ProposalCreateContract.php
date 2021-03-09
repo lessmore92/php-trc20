@@ -28,12 +28,11 @@ class ProposalCreateContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
-     * @type array|\Google\Protobuf\Internal\MapField $parameters
+     *     @type string $owner_address
+     *     @type array|\Google\Protobuf\Internal\MapField $parameters
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\ProposalContract::initOnce();
         parent::__construct($data);
     }
@@ -76,7 +75,7 @@ class ProposalCreateContract extends \Google\Protobuf\Internal\Message
      */
     public function setParameters($var)
     {
-        $arr              = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::INT64, \Google\Protobuf\Internal\GPBType::INT64);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::INT64, \Google\Protobuf\Internal\GPBType::INT64);
         $this->parameters = $arr;
 
         return $this;

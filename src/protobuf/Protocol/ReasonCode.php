@@ -109,38 +109,37 @@ class ReasonCode
     const UNKNOWN = 255;
 
     private static $valueToName = [
-        self::REQUESTED                   => 'REQUESTED',
-        self::BAD_PROTOCOL                => 'BAD_PROTOCOL',
-        self::TOO_MANY_PEERS              => 'TOO_MANY_PEERS',
-        self::DUPLICATE_PEER              => 'DUPLICATE_PEER',
-        self::INCOMPATIBLE_PROTOCOL       => 'INCOMPATIBLE_PROTOCOL',
-        self::NULL_IDENTITY               => 'NULL_IDENTITY',
-        self::PEER_QUITING                => 'PEER_QUITING',
-        self::UNEXPECTED_IDENTITY         => 'UNEXPECTED_IDENTITY',
-        self::LOCAL_IDENTITY              => 'LOCAL_IDENTITY',
-        self::PING_TIMEOUT                => 'PING_TIMEOUT',
-        self::USER_REASON                 => 'USER_REASON',
-        self::RESET                       => 'RESET',
-        self::SYNC_FAIL                   => 'SYNC_FAIL',
-        self::FETCH_FAIL                  => 'FETCH_FAIL',
-        self::BAD_TX                      => 'BAD_TX',
-        self::BAD_BLOCK                   => 'BAD_BLOCK',
-        self::FORKED                      => 'FORKED',
-        self::UNLINKABLE                  => 'UNLINKABLE',
-        self::INCOMPATIBLE_VERSION        => 'INCOMPATIBLE_VERSION',
-        self::INCOMPATIBLE_CHAIN          => 'INCOMPATIBLE_CHAIN',
-        self::TIME_OUT                    => 'TIME_OUT',
-        self::CONNECT_FAIL                => 'CONNECT_FAIL',
+        self::REQUESTED => 'REQUESTED',
+        self::BAD_PROTOCOL => 'BAD_PROTOCOL',
+        self::TOO_MANY_PEERS => 'TOO_MANY_PEERS',
+        self::DUPLICATE_PEER => 'DUPLICATE_PEER',
+        self::INCOMPATIBLE_PROTOCOL => 'INCOMPATIBLE_PROTOCOL',
+        self::NULL_IDENTITY => 'NULL_IDENTITY',
+        self::PEER_QUITING => 'PEER_QUITING',
+        self::UNEXPECTED_IDENTITY => 'UNEXPECTED_IDENTITY',
+        self::LOCAL_IDENTITY => 'LOCAL_IDENTITY',
+        self::PING_TIMEOUT => 'PING_TIMEOUT',
+        self::USER_REASON => 'USER_REASON',
+        self::RESET => 'RESET',
+        self::SYNC_FAIL => 'SYNC_FAIL',
+        self::FETCH_FAIL => 'FETCH_FAIL',
+        self::BAD_TX => 'BAD_TX',
+        self::BAD_BLOCK => 'BAD_BLOCK',
+        self::FORKED => 'FORKED',
+        self::UNLINKABLE => 'UNLINKABLE',
+        self::INCOMPATIBLE_VERSION => 'INCOMPATIBLE_VERSION',
+        self::INCOMPATIBLE_CHAIN => 'INCOMPATIBLE_CHAIN',
+        self::TIME_OUT => 'TIME_OUT',
+        self::CONNECT_FAIL => 'CONNECT_FAIL',
         self::TOO_MANY_PEERS_WITH_SAME_IP => 'TOO_MANY_PEERS_WITH_SAME_IP',
-        self::UNKNOWN                     => 'UNKNOWN',
+        self::UNKNOWN => 'UNKNOWN',
     ];
 
     public static function name($value)
     {
-        if (!isset(self::$valueToName[$value]))
-        {
+        if (!isset(self::$valueToName[$value])) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no name defined for value %s', __CLASS__, $value));
+                    'Enum %s has no name defined for value %s', __CLASS__, $value));
         }
         return self::$valueToName[$value];
     }
@@ -149,10 +148,9 @@ class ReasonCode
     public static function value($name)
     {
         $const = __CLASS__ . '::' . strtoupper($name);
-        if (!defined($const))
-        {
+        if (!defined($const)) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no value defined for name %s', __CLASS__, $name));
+                    'Enum %s has no value defined for name %s', __CLASS__, $name));
         }
         return constant($const);
     }

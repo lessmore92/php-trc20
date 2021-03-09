@@ -25,17 +25,16 @@ class Type
     const FETCH = 2;
 
     private static $valueToName = [
-        self::SYNC    => 'SYNC',
+        self::SYNC => 'SYNC',
         self::ADVTISE => 'ADVTISE',
-        self::FETCH   => 'FETCH',
+        self::FETCH => 'FETCH',
     ];
 
     public static function name($value)
     {
-        if (!isset(self::$valueToName[$value]))
-        {
+        if (!isset(self::$valueToName[$value])) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no name defined for value %s', __CLASS__, $value));
+                    'Enum %s has no name defined for value %s', __CLASS__, $value));
         }
         return self::$valueToName[$value];
     }
@@ -44,10 +43,9 @@ class Type
     public static function value($name)
     {
         $const = __CLASS__ . '::' . strtoupper($name);
-        if (!defined($const))
-        {
+        if (!defined($const)) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no value defined for name %s', __CLASS__, $name));
+                    'Enum %s has no value defined for name %s', __CLASS__, $name));
         }
         return constant($const);
     }

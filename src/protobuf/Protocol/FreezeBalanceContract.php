@@ -40,15 +40,14 @@ class FreezeBalanceContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
-     * @type int|string $frozen_balance
-     * @type int|string $frozen_duration
-     * @type int $resource
-     * @type string $receiver_address
+     *     @type string $owner_address
+     *     @type int|string $frozen_balance
+     *     @type int|string $frozen_duration
+     *     @type int $resource
+     *     @type string $receiver_address
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\BalanceContract::initOnce();
         parent::__construct($data);
     }

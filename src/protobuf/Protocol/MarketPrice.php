@@ -28,12 +28,11 @@ class MarketPrice extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int|string $sell_token_quantity
-     * @type int|string $buy_token_quantity
+     *     @type int|string $sell_token_quantity
+     *     @type int|string $buy_token_quantity
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }

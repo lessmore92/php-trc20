@@ -28,12 +28,11 @@ class ProposalDeleteContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
-     * @type int|string $proposal_id
+     *     @type string $owner_address
+     *     @type int|string $proposal_id
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\ProposalContract::initOnce();
         parent::__construct($data);
     }

@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * frozen balance
+ * frozen balance 
  *
  * Generated from protobuf message <code>protocol.Account.Frozen</code>
  */
@@ -34,14 +34,13 @@ class Frozen extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int|string $frozen_balance
+     *     @type int|string $frozen_balance
      *           the frozen trx balance
-     * @type int|string $expire_time
+     *     @type int|string $expire_time
      *           the expire time
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }

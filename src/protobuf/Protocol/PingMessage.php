@@ -36,14 +36,13 @@ class PingMessage extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\Endpoint $from
-     * @type \Protocol\Endpoint $to
-     * @type int $version
-     * @type int|string $timestamp
+     *     @type \Protocol\Endpoint $from
+     *     @type \Protocol\Endpoint $to
+     *     @type int $version
+     *     @type int|string $timestamp
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Discover::initOnce();
         parent::__construct($data);
     }
@@ -55,6 +54,16 @@ class PingMessage extends \Google\Protobuf\Internal\Message
     public function getFrom()
     {
         return isset($this->from) ? $this->from : null;
+    }
+
+    public function hasFrom()
+    {
+        return isset($this->from);
+    }
+
+    public function clearFrom()
+    {
+        unset($this->from);
     }
 
     /**
@@ -70,16 +79,6 @@ class PingMessage extends \Google\Protobuf\Internal\Message
         return $this;
     }
 
-    public function hasFrom()
-    {
-        return isset($this->from);
-    }
-
-    public function clearFrom()
-    {
-        unset($this->from);
-    }
-
     /**
      * Generated from protobuf field <code>.protocol.Endpoint to = 2;</code>
      * @return \Protocol\Endpoint
@@ -87,6 +86,16 @@ class PingMessage extends \Google\Protobuf\Internal\Message
     public function getTo()
     {
         return isset($this->to) ? $this->to : null;
+    }
+
+    public function hasTo()
+    {
+        return isset($this->to);
+    }
+
+    public function clearTo()
+    {
+        unset($this->to);
     }
 
     /**
@@ -100,16 +109,6 @@ class PingMessage extends \Google\Protobuf\Internal\Message
         $this->to = $var;
 
         return $this;
-    }
-
-    public function hasTo()
-    {
-        return isset($this->to);
-    }
-
-    public function clearTo()
-    {
-        unset($this->to);
     }
 
     /**

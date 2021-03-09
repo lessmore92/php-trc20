@@ -96,29 +96,28 @@ class ConfigNodeInfo extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $codeVersion
-     * @type string $p2pVersion
-     * @type int $listenPort
-     * @type bool $discoverEnable
-     * @type int $activeNodeSize
-     * @type int $passiveNodeSize
-     * @type int $sendNodeSize
-     * @type int $maxConnectCount
-     * @type int $sameIpMaxConnectCount
-     * @type int $backupListenPort
-     * @type int $backupMemberSize
-     * @type int $backupPriority
-     * @type int $dbVersion
-     * @type int $minParticipationRate
-     * @type bool $supportConstant
-     * @type float $minTimeRatio
-     * @type float $maxTimeRatio
-     * @type int|string $allowCreationOfContracts
-     * @type int|string $allowAdaptiveEnergy
+     *     @type string $codeVersion
+     *     @type string $p2pVersion
+     *     @type int $listenPort
+     *     @type bool $discoverEnable
+     *     @type int $activeNodeSize
+     *     @type int $passiveNodeSize
+     *     @type int $sendNodeSize
+     *     @type int $maxConnectCount
+     *     @type int $sameIpMaxConnectCount
+     *     @type int $backupListenPort
+     *     @type int $backupMemberSize
+     *     @type int $backupPriority
+     *     @type int $dbVersion
+     *     @type int $minParticipationRate
+     *     @type bool $supportConstant
+     *     @type float $minTimeRatio
+     *     @type float $maxTimeRatio
+     *     @type int|string $allowCreationOfContracts
+     *     @type int|string $allowAdaptiveEnergy
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }

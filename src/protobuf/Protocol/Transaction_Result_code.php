@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\Transaction\Result\code instead.
      * @deprecated
      */
-    class Transaction_Result_code
-    {
-    }
+    class Transaction_Result_code {}
 }
 class_exists(Transaction\Result\code::class);
 @trigger_error('Protocol\Transaction_Result_code is deprecated and will be removed in the next major release. Use Protocol\Transaction\Result\code instead', E_USER_DEPRECATED);

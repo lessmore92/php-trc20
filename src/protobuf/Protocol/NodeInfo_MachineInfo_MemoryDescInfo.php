@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\NodeInfo\MachineInfo\MemoryDescInfo instead.
      * @deprecated
      */
-    class NodeInfo_MachineInfo_MemoryDescInfo
-    {
-    }
+    class NodeInfo_MachineInfo_MemoryDescInfo {}
 }
 class_exists(NodeInfo\MachineInfo\MemoryDescInfo::class);
 @trigger_error('Protocol\NodeInfo_MachineInfo_MemoryDescInfo is deprecated and will be removed in the next major release. Use Protocol\NodeInfo\MachineInfo\MemoryDescInfo instead', E_USER_DEPRECATED);

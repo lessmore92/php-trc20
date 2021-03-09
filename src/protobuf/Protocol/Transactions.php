@@ -24,11 +24,10 @@ class Transactions extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\Transaction[]|\Google\Protobuf\Internal\RepeatedField $transactions
+     *     @type \Protocol\Transaction[]|\Google\Protobuf\Internal\RepeatedField $transactions
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -49,7 +48,7 @@ class Transactions extends \Google\Protobuf\Internal\Message
      */
     public function setTransactions($var)
     {
-        $arr                = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Transaction::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Transaction::class);
         $this->transactions = $arr;
 
         return $this;

@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Account
+ * Account 
  *
  * Generated from protobuf message <code>protocol.Account</code>
  */
@@ -37,6 +37,30 @@ class Account extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 balance = 4;</code>
      */
     protected $balance = 0;
+    /**
+     * the votes
+     *
+     * Generated from protobuf field <code>repeated .protocol.Vote votes = 5;</code>
+     */
+    private $votes;
+    /**
+     * the other asset owned by this account
+     *
+     * Generated from protobuf field <code>map<string, int64> asset = 6;</code>
+     */
+    private $asset;
+    /**
+     * the other asset owned by this account，key is assetId
+     *
+     * Generated from protobuf field <code>map<string, int64> assetV2 = 56;</code>
+     */
+    private $assetV2;
+    /**
+     * the frozen balance for bandwidth
+     *
+     * Generated from protobuf field <code>repeated .protocol.Account.Frozen frozen = 7;</code>
+     */
+    private $frozen;
     /**
      * bandwidth, get from frozen
      *
@@ -94,6 +118,12 @@ class Account extends \Google\Protobuf\Internal\Message
      */
     protected $is_committee = false;
     /**
+     * frozen asset(for asset issuer)
+     *
+     * Generated from protobuf field <code>repeated .protocol.Account.Frozen frozen_supply = 16;</code>
+     */
+    private $frozen_supply;
+    /**
      * asset_issued_name
      *
      * Generated from protobuf field <code>bytes asset_issued_name = 17;</code>
@@ -104,9 +134,25 @@ class Account extends \Google\Protobuf\Internal\Message
      */
     protected $asset_issued_ID = '';
     /**
+     * Generated from protobuf field <code>map<string, int64> latest_asset_operation_time = 18;</code>
+     */
+    private $latest_asset_operation_time;
+    /**
+     * Generated from protobuf field <code>map<string, int64> latest_asset_operation_timeV2 = 58;</code>
+     */
+    private $latest_asset_operation_timeV2;
+    /**
      * Generated from protobuf field <code>int64 free_net_usage = 19;</code>
      */
     protected $free_net_usage = 0;
+    /**
+     * Generated from protobuf field <code>map<string, int64> free_asset_net_usage = 20;</code>
+     */
+    private $free_asset_net_usage;
+    /**
+     * Generated from protobuf field <code>map<string, int64> free_asset_net_usageV2 = 59;</code>
+     */
+    private $free_asset_net_usageV2;
     /**
      * Generated from protobuf field <code>int64 latest_consume_time = 21;</code>
      */
@@ -138,52 +184,6 @@ class Account extends \Google\Protobuf\Internal\Message
      */
     protected $witness_permission = null;
     /**
-     * the votes
-     *
-     * Generated from protobuf field <code>repeated .protocol.Vote votes = 5;</code>
-     */
-    private $votes;
-    /**
-     * the other asset owned by this account
-     *
-     * Generated from protobuf field <code>map<string, int64> asset = 6;</code>
-     */
-    private $asset;
-    /**
-     * the other asset owned by this account，key is assetId
-     *
-     * Generated from protobuf field <code>map<string, int64> assetV2 = 56;</code>
-     */
-    private $assetV2;
-    /**
-     * the frozen balance for bandwidth
-     *
-     * Generated from protobuf field <code>repeated .protocol.Account.Frozen frozen = 7;</code>
-     */
-    private $frozen;
-    /**
-     * frozen asset(for asset issuer)
-     *
-     * Generated from protobuf field <code>repeated .protocol.Account.Frozen frozen_supply = 16;</code>
-     */
-    private $frozen_supply;
-    /**
-     * Generated from protobuf field <code>map<string, int64> latest_asset_operation_time = 18;</code>
-     */
-    private $latest_asset_operation_time;
-    /**
-     * Generated from protobuf field <code>map<string, int64> latest_asset_operation_timeV2 = 58;</code>
-     */
-    private $latest_asset_operation_timeV2;
-    /**
-     * Generated from protobuf field <code>map<string, int64> free_asset_net_usage = 20;</code>
-     */
-    private $free_asset_net_usage;
-    /**
-     * Generated from protobuf field <code>map<string, int64> free_asset_net_usageV2 = 59;</code>
-     */
-    private $free_asset_net_usageV2;
-    /**
      * Generated from protobuf field <code>repeated .protocol.Permission active_permission = 33;</code>
      */
     private $active_permission;
@@ -194,62 +194,61 @@ class Account extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $account_name
+     *     @type string $account_name
      *           account nick name
-     * @type int $type
-     * @type string $address
+     *     @type int $type
+     *     @type string $address
      *           the create address
-     * @type int|string $balance
+     *     @type int|string $balance
      *           the trx balance
-     * @type \Protocol\Vote[]|\Google\Protobuf\Internal\RepeatedField $votes
+     *     @type \Protocol\Vote[]|\Google\Protobuf\Internal\RepeatedField $votes
      *           the votes
-     * @type array|\Google\Protobuf\Internal\MapField $asset
+     *     @type array|\Google\Protobuf\Internal\MapField $asset
      *           the other asset owned by this account
-     * @type array|\Google\Protobuf\Internal\MapField $assetV2
+     *     @type array|\Google\Protobuf\Internal\MapField $assetV2
      *           the other asset owned by this account，key is assetId
-     * @type \Protocol\Account\Frozen[]|\Google\Protobuf\Internal\RepeatedField $frozen
+     *     @type \Protocol\Account\Frozen[]|\Google\Protobuf\Internal\RepeatedField $frozen
      *           the frozen balance for bandwidth
-     * @type int|string $net_usage
+     *     @type int|string $net_usage
      *           bandwidth, get from frozen
-     * @type int|string $acquired_delegated_frozen_balance_for_bandwidth
+     *     @type int|string $acquired_delegated_frozen_balance_for_bandwidth
      *          Frozen balance provided by other accounts to this account
-     * @type int|string $delegated_frozen_balance_for_bandwidth
+     *     @type int|string $delegated_frozen_balance_for_bandwidth
      *          Freeze and provide balances to other accounts
-     * @type int|string $create_time
+     *     @type int|string $create_time
      *           this account create time
-     * @type int|string $latest_opration_time
+     *     @type int|string $latest_opration_time
      *           this last operation time, including transfer, voting and so on. //FIXME fix grammar
-     * @type int|string $allowance
+     *     @type int|string $allowance
      *           witness block producing allowance
-     * @type int|string $latest_withdraw_time
+     *     @type int|string $latest_withdraw_time
      *           last withdraw time
-     * @type string $code
+     *     @type string $code
      *           not used so far
-     * @type bool $is_witness
-     * @type bool $is_committee
-     * @type \Protocol\Account\Frozen[]|\Google\Protobuf\Internal\RepeatedField $frozen_supply
+     *     @type bool $is_witness
+     *     @type bool $is_committee
+     *     @type \Protocol\Account\Frozen[]|\Google\Protobuf\Internal\RepeatedField $frozen_supply
      *           frozen asset(for asset issuer)
-     * @type string $asset_issued_name
+     *     @type string $asset_issued_name
      *           asset_issued_name
-     * @type string $asset_issued_ID
-     * @type array|\Google\Protobuf\Internal\MapField $latest_asset_operation_time
-     * @type array|\Google\Protobuf\Internal\MapField $latest_asset_operation_timeV2
-     * @type int|string $free_net_usage
-     * @type array|\Google\Protobuf\Internal\MapField $free_asset_net_usage
-     * @type array|\Google\Protobuf\Internal\MapField $free_asset_net_usageV2
-     * @type int|string $latest_consume_time
-     * @type int|string $latest_consume_free_time
-     * @type string $account_id
+     *     @type string $asset_issued_ID
+     *     @type array|\Google\Protobuf\Internal\MapField $latest_asset_operation_time
+     *     @type array|\Google\Protobuf\Internal\MapField $latest_asset_operation_timeV2
+     *     @type int|string $free_net_usage
+     *     @type array|\Google\Protobuf\Internal\MapField $free_asset_net_usage
+     *     @type array|\Google\Protobuf\Internal\MapField $free_asset_net_usageV2
+     *     @type int|string $latest_consume_time
+     *     @type int|string $latest_consume_free_time
+     *     @type string $account_id
      *           the identity of this account, case insensitive
-     * @type \Protocol\Account\AccountResource $account_resource
-     * @type string $codeHash
-     * @type \Protocol\Permission $owner_permission
-     * @type \Protocol\Permission $witness_permission
-     * @type \Protocol\Permission[]|\Google\Protobuf\Internal\RepeatedField $active_permission
+     *     @type \Protocol\Account\AccountResource $account_resource
+     *     @type string $codeHash
+     *     @type \Protocol\Permission $owner_permission
+     *     @type \Protocol\Permission $witness_permission
+     *     @type \Protocol\Permission[]|\Google\Protobuf\Internal\RepeatedField $active_permission
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -374,7 +373,7 @@ class Account extends \Google\Protobuf\Internal\Message
      */
     public function setVotes($var)
     {
-        $arr         = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Vote::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Vote::class);
         $this->votes = $arr;
 
         return $this;
@@ -400,7 +399,7 @@ class Account extends \Google\Protobuf\Internal\Message
      */
     public function setAsset($var)
     {
-        $arr         = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::INT64);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::INT64);
         $this->asset = $arr;
 
         return $this;
@@ -426,7 +425,7 @@ class Account extends \Google\Protobuf\Internal\Message
      */
     public function setAssetV2($var)
     {
-        $arr           = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::INT64);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::INT64);
         $this->assetV2 = $arr;
 
         return $this;
@@ -452,7 +451,7 @@ class Account extends \Google\Protobuf\Internal\Message
      */
     public function setFrozen($var)
     {
-        $arr          = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Account\Frozen::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Account\Frozen::class);
         $this->frozen = $arr;
 
         return $this;
@@ -730,7 +729,7 @@ class Account extends \Google\Protobuf\Internal\Message
      */
     public function setFrozenSupply($var)
     {
-        $arr                 = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Account\Frozen::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Account\Frozen::class);
         $this->frozen_supply = $arr;
 
         return $this;
@@ -800,7 +799,7 @@ class Account extends \Google\Protobuf\Internal\Message
      */
     public function setLatestAssetOperationTime($var)
     {
-        $arr                               = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::INT64);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::INT64);
         $this->latest_asset_operation_time = $arr;
 
         return $this;
@@ -822,7 +821,7 @@ class Account extends \Google\Protobuf\Internal\Message
      */
     public function setLatestAssetOperationTimeV2($var)
     {
-        $arr                                 = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::INT64);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::INT64);
         $this->latest_asset_operation_timeV2 = $arr;
 
         return $this;
@@ -866,7 +865,7 @@ class Account extends \Google\Protobuf\Internal\Message
      */
     public function setFreeAssetNetUsage($var)
     {
-        $arr                        = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::INT64);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::INT64);
         $this->free_asset_net_usage = $arr;
 
         return $this;
@@ -888,7 +887,7 @@ class Account extends \Google\Protobuf\Internal\Message
      */
     public function setFreeAssetNetUsageV2($var)
     {
-        $arr                          = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::INT64);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::INT64);
         $this->free_asset_net_usageV2 = $arr;
 
         return $this;
@@ -973,6 +972,16 @@ class Account extends \Google\Protobuf\Internal\Message
         return isset($this->account_resource) ? $this->account_resource : null;
     }
 
+    public function hasAccountResource()
+    {
+        return isset($this->account_resource);
+    }
+
+    public function clearAccountResource()
+    {
+        unset($this->account_resource);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.Account.AccountResource account_resource = 26;</code>
      * @param \Protocol\Account\AccountResource $var
@@ -984,16 +993,6 @@ class Account extends \Google\Protobuf\Internal\Message
         $this->account_resource = $var;
 
         return $this;
-    }
-
-    public function hasAccountResource()
-    {
-        return isset($this->account_resource);
-    }
-
-    public function clearAccountResource()
-    {
-        unset($this->account_resource);
     }
 
     /**
@@ -1027,6 +1026,16 @@ class Account extends \Google\Protobuf\Internal\Message
         return isset($this->owner_permission) ? $this->owner_permission : null;
     }
 
+    public function hasOwnerPermission()
+    {
+        return isset($this->owner_permission);
+    }
+
+    public function clearOwnerPermission()
+    {
+        unset($this->owner_permission);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.Permission owner_permission = 31;</code>
      * @param \Protocol\Permission $var
@@ -1040,16 +1049,6 @@ class Account extends \Google\Protobuf\Internal\Message
         return $this;
     }
 
-    public function hasOwnerPermission()
-    {
-        return isset($this->owner_permission);
-    }
-
-    public function clearOwnerPermission()
-    {
-        unset($this->owner_permission);
-    }
-
     /**
      * Generated from protobuf field <code>.protocol.Permission witness_permission = 32;</code>
      * @return \Protocol\Permission
@@ -1057,6 +1056,16 @@ class Account extends \Google\Protobuf\Internal\Message
     public function getWitnessPermission()
     {
         return isset($this->witness_permission) ? $this->witness_permission : null;
+    }
+
+    public function hasWitnessPermission()
+    {
+        return isset($this->witness_permission);
+    }
+
+    public function clearWitnessPermission()
+    {
+        unset($this->witness_permission);
     }
 
     /**
@@ -1070,16 +1079,6 @@ class Account extends \Google\Protobuf\Internal\Message
         $this->witness_permission = $var;
 
         return $this;
-    }
-
-    public function hasWitnessPermission()
-    {
-        return isset($this->witness_permission);
-    }
-
-    public function clearWitnessPermission()
-    {
-        unset($this->witness_permission);
     }
 
     /**
@@ -1098,7 +1097,7 @@ class Account extends \Google\Protobuf\Internal\Message
      */
     public function setActivePermission($var)
     {
-        $arr                     = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Permission::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Permission::class);
         $this->active_permission = $arr;
 
         return $this;

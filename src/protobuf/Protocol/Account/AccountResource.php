@@ -62,23 +62,22 @@ class AccountResource extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int|string $energy_usage
+     *     @type int|string $energy_usage
      *           energy resource, get from frozen
-     * @type \Protocol\Account\Frozen $frozen_balance_for_energy
+     *     @type \Protocol\Account\Frozen $frozen_balance_for_energy
      *           the frozen balance for energy
-     * @type int|string $latest_consume_time_for_energy
-     * @type int|string $acquired_delegated_frozen_balance_for_energy
+     *     @type int|string $latest_consume_time_for_energy
+     *     @type int|string $acquired_delegated_frozen_balance_for_energy
      *          Frozen balance provided by other accounts to this account
-     * @type int|string $delegated_frozen_balance_for_energy
+     *     @type int|string $delegated_frozen_balance_for_energy
      *          Frozen balances provided to other accounts
-     * @type int|string $storage_limit
+     *     @type int|string $storage_limit
      *           storage resource, get from market
-     * @type int|string $storage_usage
-     * @type int|string $latest_exchange_storage_time
+     *     @type int|string $storage_usage
+     *     @type int|string $latest_exchange_storage_time
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -120,6 +119,16 @@ class AccountResource extends \Google\Protobuf\Internal\Message
         return isset($this->frozen_balance_for_energy) ? $this->frozen_balance_for_energy : null;
     }
 
+    public function hasFrozenBalanceForEnergy()
+    {
+        return isset($this->frozen_balance_for_energy);
+    }
+
+    public function clearFrozenBalanceForEnergy()
+    {
+        unset($this->frozen_balance_for_energy);
+    }
+
     /**
      * the frozen balance for energy
      *
@@ -133,16 +142,6 @@ class AccountResource extends \Google\Protobuf\Internal\Message
         $this->frozen_balance_for_energy = $var;
 
         return $this;
-    }
-
-    public function hasFrozenBalanceForEnergy()
-    {
-        return isset($this->frozen_balance_for_energy);
-    }
-
-    public function clearFrozenBalanceForEnergy()
-    {
-        unset($this->frozen_balance_for_energy);
     }
 
     /**

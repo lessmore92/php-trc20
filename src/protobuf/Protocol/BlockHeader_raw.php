@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\BlockHeader\raw instead.
      * @deprecated
      */
-    class BlockHeader_raw
-    {
-    }
+    class BlockHeader_raw {}
 }
 class_exists(BlockHeader\raw::class);
 @trigger_error('Protocol\BlockHeader_raw is deprecated and will be removed in the next major release. Use Protocol\BlockHeader\raw instead', E_USER_DEPRECATED);

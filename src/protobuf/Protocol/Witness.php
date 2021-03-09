@@ -58,19 +58,18 @@ class Witness extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $address
-     * @type int|string $voteCount
-     * @type string $pubKey
-     * @type string $url
-     * @type int|string $totalProduced
-     * @type int|string $totalMissed
-     * @type int|string $latestBlockNum
-     * @type int|string $latestSlotNum
-     * @type bool $isJobs
+     *     @type string $address
+     *     @type int|string $voteCount
+     *     @type string $pubKey
+     *     @type string $url
+     *     @type int|string $totalProduced
+     *     @type int|string $totalMissed
+     *     @type int|string $latestBlockNum
+     *     @type int|string $latestSlotNum
+     *     @type bool $isJobs
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }

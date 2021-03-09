@@ -30,13 +30,12 @@ class UpdateBrokerageContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
-     * @type int $brokerage
+     *     @type string $owner_address
+     *     @type int $brokerage
      *           1 mean 1%
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\StorageContract::initOnce();
         parent::__construct($data);
     }

@@ -24,11 +24,10 @@ class MarketOrderList extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\MarketOrder[]|\Google\Protobuf\Internal\RepeatedField $orders
+     *     @type \Protocol\MarketOrder[]|\Google\Protobuf\Internal\RepeatedField $orders
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -49,7 +48,7 @@ class MarketOrderList extends \Google\Protobuf\Internal\Message
      */
     public function setOrders($var)
     {
-        $arr          = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\MarketOrder::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\MarketOrder::class);
         $this->orders = $arr;
 
         return $this;

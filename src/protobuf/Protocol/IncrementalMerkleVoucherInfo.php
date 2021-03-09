@@ -28,12 +28,11 @@ class IncrementalMerkleVoucherInfo extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\IncrementalMerkleVoucher[]|\Google\Protobuf\Internal\RepeatedField $vouchers
-     * @type string[]|\Google\Protobuf\Internal\RepeatedField $paths
+     *     @type \Protocol\IncrementalMerkleVoucher[]|\Google\Protobuf\Internal\RepeatedField $vouchers
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $paths
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\ShieldContract::initOnce();
         parent::__construct($data);
     }
@@ -54,7 +53,7 @@ class IncrementalMerkleVoucherInfo extends \Google\Protobuf\Internal\Message
      */
     public function setVouchers($var)
     {
-        $arr            = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\IncrementalMerkleVoucher::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\IncrementalMerkleVoucher::class);
         $this->vouchers = $arr;
 
         return $this;
@@ -76,7 +75,7 @@ class IncrementalMerkleVoucherInfo extends \Google\Protobuf\Internal\Message
      */
     public function setPaths($var)
     {
-        $arr         = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->paths = $arr;
 
         return $this;

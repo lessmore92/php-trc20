@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\ChainInventory\BlockId instead.
      * @deprecated
      */
-    class ChainInventory_BlockId
-    {
-    }
+    class ChainInventory_BlockId {}
 }
 class_exists(ChainInventory\BlockId::class);
 @trigger_error('Protocol\ChainInventory_BlockId is deprecated and will be removed in the next major release. Use Protocol\ChainInventory\BlockId instead', E_USER_DEPRECATED);

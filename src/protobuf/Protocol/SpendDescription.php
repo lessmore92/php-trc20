@@ -50,19 +50,18 @@ class SpendDescription extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $value_commitment
-     * @type string $anchor
+     *     @type string $value_commitment
+     *     @type string $anchor
      *           merkle root
-     * @type string $nullifier
+     *     @type string $nullifier
      *           used for check double spend
-     * @type string $rk
+     *     @type string $rk
      *           used for check spend authority signature
-     * @type string $zkproof
-     * @type string $spend_authority_signature
+     *     @type string $zkproof
+     *     @type string $spend_authority_signature
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\ShieldContract::initOnce();
         parent::__construct($data);
     }

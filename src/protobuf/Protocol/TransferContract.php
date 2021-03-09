@@ -32,13 +32,12 @@ class TransferContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
-     * @type string $to_address
-     * @type int|string $amount
+     *     @type string $owner_address
+     *     @type string $to_address
+     *     @type int|string $amount
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\BalanceContract::initOnce();
         parent::__construct($data);
     }

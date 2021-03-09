@@ -32,13 +32,12 @@ class TransactionRet extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int|string $blockNumber
-     * @type int|string $blockTimeStamp
-     * @type \Protocol\TransactionInfo[]|\Google\Protobuf\Internal\RepeatedField $transactioninfo
+     *     @type int|string $blockNumber
+     *     @type int|string $blockTimeStamp
+     *     @type \Protocol\TransactionInfo[]|\Google\Protobuf\Internal\RepeatedField $transactioninfo
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -103,7 +102,7 @@ class TransactionRet extends \Google\Protobuf\Internal\Message
      */
     public function setTransactioninfo($var)
     {
-        $arr                   = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\TransactionInfo::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\TransactionInfo::class);
         $this->transactioninfo = $arr;
 
         return $this;

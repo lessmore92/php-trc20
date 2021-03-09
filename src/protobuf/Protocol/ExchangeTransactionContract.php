@@ -40,15 +40,14 @@ class ExchangeTransactionContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
-     * @type int|string $exchange_id
-     * @type string $token_id
-     * @type int|string $quant
-     * @type int|string $expected
+     *     @type string $owner_address
+     *     @type int|string $exchange_id
+     *     @type string $token_id
+     *     @type int|string $quant
+     *     @type int|string $expected
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\ExchangeContract::initOnce();
         parent::__construct($data);
     }

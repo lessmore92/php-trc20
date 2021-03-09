@@ -28,12 +28,11 @@ class WitnessCreateContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
-     * @type string $url
+     *     @type string $owner_address
+     *     @type string $url
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\WitnessContract::initOnce();
         parent::__construct($data);
     }

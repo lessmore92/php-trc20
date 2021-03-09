@@ -50,19 +50,18 @@ class ReceiveDescription extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $value_commitment
-     * @type string $note_commitment
-     * @type string $epk
+     *     @type string $value_commitment
+     *     @type string $note_commitment
+     *     @type string $epk
      *           for Encryption
-     * @type string $c_enc
+     *     @type string $c_enc
      *           Encryption for incoming, decrypt it with ivk
-     * @type string $c_out
+     *     @type string $c_out
      *           Encryption for audit, decrypt it with ovk
-     * @type string $zkproof
+     *     @type string $zkproof
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\ShieldContract::initOnce();
         parent::__construct($data);
     }

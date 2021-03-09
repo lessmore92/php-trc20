@@ -18,13 +18,13 @@ class VoteWitnessContract extends \Google\Protobuf\Internal\Message
      */
     protected $owner_address = '';
     /**
-     * Generated from protobuf field <code>bool support = 3;</code>
-     */
-    protected $support = false;
-    /**
      * Generated from protobuf field <code>repeated .protocol.VoteWitnessContract.Vote votes = 2;</code>
      */
     private $votes;
+    /**
+     * Generated from protobuf field <code>bool support = 3;</code>
+     */
+    protected $support = false;
 
     /**
      * Constructor.
@@ -32,13 +32,12 @@ class VoteWitnessContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
-     * @type \Protocol\VoteWitnessContract\Vote[]|\Google\Protobuf\Internal\RepeatedField $votes
-     * @type bool $support
+     *     @type string $owner_address
+     *     @type \Protocol\VoteWitnessContract\Vote[]|\Google\Protobuf\Internal\RepeatedField $votes
+     *     @type bool $support
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\WitnessContract::initOnce();
         parent::__construct($data);
     }
@@ -81,7 +80,7 @@ class VoteWitnessContract extends \Google\Protobuf\Internal\Message
      */
     public function setVotes($var)
     {
-        $arr         = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\VoteWitnessContract\Vote::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\VoteWitnessContract\Vote::class);
         $this->votes = $arr;
 
         return $this;

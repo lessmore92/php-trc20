@@ -38,15 +38,14 @@ class TransferAssetContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $asset_name
+     *     @type string $asset_name
      *           this field is token name before the proposal ALLOW_SAME_TOKEN_NAME is active, otherwise it is token id and token is should be in string format.
-     * @type string $owner_address
-     * @type string $to_address
-     * @type int|string $amount
+     *     @type string $owner_address
+     *     @type string $to_address
+     *     @type int|string $amount
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\AssetIssueContract::initOnce();
         parent::__construct($data);
     }

@@ -30,12 +30,11 @@ class AccountUpdateContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $account_name
-     * @type string $owner_address
+     *     @type string $account_name
+     *     @type string $owner_address
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\AccountContract::initOnce();
         parent::__construct($data);
     }

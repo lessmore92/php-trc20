@@ -26,6 +26,14 @@ class Entry extends \Google\Protobuf\Internal\Message
      */
     protected $name = '';
     /**
+     * Generated from protobuf field <code>repeated .protocol.SmartContract.ABI.Entry.Param inputs = 4;</code>
+     */
+    private $inputs;
+    /**
+     * Generated from protobuf field <code>repeated .protocol.SmartContract.ABI.Entry.Param outputs = 5;</code>
+     */
+    private $outputs;
+    /**
      * Generated from protobuf field <code>.protocol.SmartContract.ABI.Entry.EntryType type = 6;</code>
      */
     protected $type = 0;
@@ -37,14 +45,6 @@ class Entry extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.protocol.SmartContract.ABI.Entry.StateMutabilityType stateMutability = 8;</code>
      */
     protected $stateMutability = 0;
-    /**
-     * Generated from protobuf field <code>repeated .protocol.SmartContract.ABI.Entry.Param inputs = 4;</code>
-     */
-    private $inputs;
-    /**
-     * Generated from protobuf field <code>repeated .protocol.SmartContract.ABI.Entry.Param outputs = 5;</code>
-     */
-    private $outputs;
 
     /**
      * Constructor.
@@ -52,18 +52,17 @@ class Entry extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type bool $anonymous
-     * @type bool $constant
-     * @type string $name
-     * @type \Protocol\SmartContract\ABI\Entry\Param[]|\Google\Protobuf\Internal\RepeatedField $inputs
-     * @type \Protocol\SmartContract\ABI\Entry\Param[]|\Google\Protobuf\Internal\RepeatedField $outputs
-     * @type int $type
-     * @type bool $payable
-     * @type int $stateMutability
+     *     @type bool $anonymous
+     *     @type bool $constant
+     *     @type string $name
+     *     @type \Protocol\SmartContract\ABI\Entry\Param[]|\Google\Protobuf\Internal\RepeatedField $inputs
+     *     @type \Protocol\SmartContract\ABI\Entry\Param[]|\Google\Protobuf\Internal\RepeatedField $outputs
+     *     @type int $type
+     *     @type bool $payable
+     *     @type int $stateMutability
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\SmartContract::initOnce();
         parent::__construct($data);
     }
@@ -150,7 +149,7 @@ class Entry extends \Google\Protobuf\Internal\Message
      */
     public function setInputs($var)
     {
-        $arr          = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\SmartContract\ABI\Entry\Param::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\SmartContract\ABI\Entry\Param::class);
         $this->inputs = $arr;
 
         return $this;
@@ -172,7 +171,7 @@ class Entry extends \Google\Protobuf\Internal\Message
      */
     public function setOutputs($var)
     {
-        $arr           = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\SmartContract\ABI\Entry\Param::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\SmartContract\ABI\Entry\Param::class);
         $this->outputs = $arr;
 
         return $this;

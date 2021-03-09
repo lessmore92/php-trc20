@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\TransactionInfo\code instead.
      * @deprecated
      */
-    class TransactionInfo_code
-    {
-    }
+    class TransactionInfo_code {}
 }
 class_exists(TransactionInfo\code::class);
 @trigger_error('Protocol\TransactionInfo_code is deprecated and will be removed in the next major release. Use Protocol\TransactionInfo\code instead', E_USER_DEPRECATED);

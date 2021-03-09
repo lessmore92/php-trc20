@@ -8,28 +8,24 @@ class AssetIssueContract
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
+    public static function initOnce() {
         $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
-        if (static::$is_initialized == true)
-        {
-            return;
+        if (static::$is_initialized == true) {
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ÔøΩ
-(core/contract/asset_issue_contract.protoprotocol"ÔøΩ
+õ
+(core/contract/asset_issue_contract.protoprotocol"ê
 AssetIssueContract
 
 id) (	
-
-owner_address (
+owner_address (
 name (
 abbr (
 total_supply (@
-
-frozen_supply (2).protocol.AssetIssueContract.FrozenSupply
+frozen_supply (2).protocol.AssetIssueContract.FrozenSupply
 trx_num (
 	precision (
 num (
@@ -47,37 +43,32 @@ vote_score (
 public_free_asset_net_usage (#
 public_latest_free_net_time (:
 FrozenSupply
-
-frozen_amount (
+frozen_amount (
 frozen_days ("f
 TransferAssetContract
 
 asset_name (
-
-owner_address (
+owner_address (
 
 to_address (
 amount (".
 UnfreezeAssetContract
-
-owner_address ("{
+owner_address ("{
 UpdateAssetContract
-
-owner_address (
+owner_address (
 description (
 url (
 	new_limit (
 new_public_limit ("n
 ParticipateAssetIssueContract
-
-owner_address (
+owner_address (
 
 to_address (
 
 asset_name (
 amount (BE
 org.tron.protos.contractZ)github.com/tronprotocol/grpc-gateway/corebproto3'
-            , true);
+        , true);
 
         static::$is_initialized = true;
     }

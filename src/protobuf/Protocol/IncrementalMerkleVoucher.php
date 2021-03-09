@@ -18,6 +18,10 @@ class IncrementalMerkleVoucher extends \Google\Protobuf\Internal\Message
      */
     protected $tree = null;
     /**
+     * Generated from protobuf field <code>repeated .protocol.PedersenHash filled = 2;</code>
+     */
+    private $filled;
+    /**
      * Generated from protobuf field <code>.protocol.IncrementalMerkleTree cursor = 3;</code>
      */
     protected $cursor = null;
@@ -33,10 +37,6 @@ class IncrementalMerkleVoucher extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.protocol.OutputPoint output_point = 10;</code>
      */
     protected $output_point = null;
-    /**
-     * Generated from protobuf field <code>repeated .protocol.PedersenHash filled = 2;</code>
-     */
-    private $filled;
 
     /**
      * Constructor.
@@ -44,16 +44,15 @@ class IncrementalMerkleVoucher extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\IncrementalMerkleTree $tree
-     * @type \Protocol\PedersenHash[]|\Google\Protobuf\Internal\RepeatedField $filled
-     * @type \Protocol\IncrementalMerkleTree $cursor
-     * @type int|string $cursor_depth
-     * @type string $rt
-     * @type \Protocol\OutputPoint $output_point
+     *     @type \Protocol\IncrementalMerkleTree $tree
+     *     @type \Protocol\PedersenHash[]|\Google\Protobuf\Internal\RepeatedField $filled
+     *     @type \Protocol\IncrementalMerkleTree $cursor
+     *     @type int|string $cursor_depth
+     *     @type string $rt
+     *     @type \Protocol\OutputPoint $output_point
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\ShieldContract::initOnce();
         parent::__construct($data);
     }
@@ -67,6 +66,16 @@ class IncrementalMerkleVoucher extends \Google\Protobuf\Internal\Message
         return isset($this->tree) ? $this->tree : null;
     }
 
+    public function hasTree()
+    {
+        return isset($this->tree);
+    }
+
+    public function clearTree()
+    {
+        unset($this->tree);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.IncrementalMerkleTree tree = 1;</code>
      * @param \Protocol\IncrementalMerkleTree $var
@@ -78,16 +87,6 @@ class IncrementalMerkleVoucher extends \Google\Protobuf\Internal\Message
         $this->tree = $var;
 
         return $this;
-    }
-
-    public function hasTree()
-    {
-        return isset($this->tree);
-    }
-
-    public function clearTree()
-    {
-        unset($this->tree);
     }
 
     /**
@@ -106,7 +105,7 @@ class IncrementalMerkleVoucher extends \Google\Protobuf\Internal\Message
      */
     public function setFilled($var)
     {
-        $arr          = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\PedersenHash::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\PedersenHash::class);
         $this->filled = $arr;
 
         return $this;
@@ -121,6 +120,16 @@ class IncrementalMerkleVoucher extends \Google\Protobuf\Internal\Message
         return isset($this->cursor) ? $this->cursor : null;
     }
 
+    public function hasCursor()
+    {
+        return isset($this->cursor);
+    }
+
+    public function clearCursor()
+    {
+        unset($this->cursor);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.IncrementalMerkleTree cursor = 3;</code>
      * @param \Protocol\IncrementalMerkleTree $var
@@ -132,16 +141,6 @@ class IncrementalMerkleVoucher extends \Google\Protobuf\Internal\Message
         $this->cursor = $var;
 
         return $this;
-    }
-
-    public function hasCursor()
-    {
-        return isset($this->cursor);
-    }
-
-    public function clearCursor()
-    {
-        unset($this->cursor);
     }
 
     /**
@@ -197,6 +196,16 @@ class IncrementalMerkleVoucher extends \Google\Protobuf\Internal\Message
         return isset($this->output_point) ? $this->output_point : null;
     }
 
+    public function hasOutputPoint()
+    {
+        return isset($this->output_point);
+    }
+
+    public function clearOutputPoint()
+    {
+        unset($this->output_point);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.OutputPoint output_point = 10;</code>
      * @param \Protocol\OutputPoint $var
@@ -208,16 +217,6 @@ class IncrementalMerkleVoucher extends \Google\Protobuf\Internal\Message
         $this->output_point = $var;
 
         return $this;
-    }
-
-    public function hasOutputPoint()
-    {
-        return isset($this->output_point);
-    }
-
-    public function clearOutputPoint()
-    {
-        unset($this->output_point);
     }
 
 }

@@ -8,17 +8,15 @@ class ShieldContract
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
+    public static function initOnce() {
         $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
-        if (static::$is_initialized == true)
-        {
-            return;
+        if (static::$is_initialized == true) {
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ÔøΩ
+ª
 #core/contract/shield_contract.protoprotocol"#
 AuthenticationPath
 value ("c
@@ -36,11 +34,11 @@ MerklePath:
 out_points (2.protocol.OutputPoint
 	block_num ("
 PedersenHash
-content ("ÔøΩ
+content ("ç
 IncrementalMerkleTree$
 left (2.protocol.PedersenHash%
 right (2.protocol.PedersenHash\'
-parents (2.protocol.PedersenHash"ÔøΩ
+parents (2.protocol.PedersenHash"Ò
 IncrementalMerkleVoucher-
 tree (2.protocol.IncrementalMerkleTree&
 filled (2.protocol.PedersenHash/
@@ -52,7 +50,7 @@ out_points (2.protocol.OutputPoint
  (2.protocol.OutputPoint"c
 IncrementalMerkleVoucherInfo4
 vouchers (2".protocol.IncrementalMerkleVoucher
-paths ("ÔøΩ
+paths ("è
 SpendDescription
 value_commitment (
 anchor (
@@ -60,14 +58,14 @@ out_points (2.protocol.OutputPoint
 
 rk (
 zkproof (!
-spend_authority_signature ("ÔøΩ
+spend_authority_signature ("É
 ReceiveDescription
 value_commitment (
 note_commitment (
 epk (
 c_enc (
 c_out (
-zkproof ("ÔøΩ
+zkproof ("ë
 ShieldedTransferContract 
 transparent_from_address (
 from_amount (5
@@ -77,7 +75,7 @@ out_points (2.protocol.OutputPoint
 transparent_to_address (
 	to_amount (BE
 org.tron.protos.contractZ)github.com/tronprotocol/grpc-gateway/corebproto3'
-            , true);
+        , true);
 
         static::$is_initialized = true;
     }

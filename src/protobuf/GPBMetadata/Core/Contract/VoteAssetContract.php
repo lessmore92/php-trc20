@@ -8,26 +8,23 @@ class VoteAssetContract
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
+    public static function initOnce() {
         $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
-        if (static::$is_initialized == true)
-        {
-            return;
+        if (static::$is_initialized == true) {
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+ä
 \'core/contract/vote_asset_contract.protoprotocol"`
 VoteAssetContract
-
-owner_address (
+owner_address (
 vote_address (
 support (
 count (BE
 org.tron.protos.contractZ)github.com/tronprotocol/grpc-gateway/corebproto3'
-            , true);
+        , true);
 
         static::$is_initialized = true;
     }

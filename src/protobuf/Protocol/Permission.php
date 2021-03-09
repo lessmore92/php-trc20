@@ -52,19 +52,18 @@ class Permission extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $type
-     * @type int $id
+     *     @type int $type
+     *     @type int $id
      *          Owner id=0, Witness id=1, Active id start by 2
-     * @type string $permission_name
-     * @type int|string $threshold
-     * @type int $parent_id
-     * @type string $operations
+     *     @type string $permission_name
+     *     @type int|string $threshold
+     *     @type int $parent_id
+     *     @type string $operations
      *          1 bit 1 contract
-     * @type \Protocol\Key[]|\Google\Protobuf\Internal\RepeatedField $keys
+     *     @type \Protocol\Key[]|\Google\Protobuf\Internal\RepeatedField $keys
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -225,7 +224,7 @@ class Permission extends \Google\Protobuf\Internal\Message
      */
     public function setKeys($var)
     {
-        $arr        = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Key::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Key::class);
         $this->keys = $arr;
 
         return $this;

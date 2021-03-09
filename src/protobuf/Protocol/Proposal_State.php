@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\Proposal\State instead.
      * @deprecated
      */
-    class Proposal_State
-    {
-    }
+    class Proposal_State {}
 }
 class_exists(Proposal\State::class);
 @trigger_error('Protocol\Proposal_State is deprecated and will be removed in the next major release. Use Protocol\Proposal\State instead', E_USER_DEPRECATED);

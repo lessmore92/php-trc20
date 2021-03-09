@@ -30,6 +30,10 @@ class TransactionInfo extends \Google\Protobuf\Internal\Message
      */
     protected $blockTimeStamp = 0;
     /**
+     * Generated from protobuf field <code>repeated bytes contractResult = 5;</code>
+     */
+    private $contractResult;
+    /**
      * Generated from protobuf field <code>bytes contract_address = 6;</code>
      */
     protected $contract_address = '';
@@ -37,6 +41,10 @@ class TransactionInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.protocol.ResourceReceipt receipt = 7;</code>
      */
     protected $receipt = null;
+    /**
+     * Generated from protobuf field <code>repeated .protocol.TransactionInfo.Log log = 8;</code>
+     */
+    private $log;
     /**
      * Generated from protobuf field <code>.protocol.TransactionInfo.code result = 9;</code>
      */
@@ -57,6 +65,10 @@ class TransactionInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 unfreeze_amount = 16;</code>
      */
     protected $unfreeze_amount = 0;
+    /**
+     * Generated from protobuf field <code>repeated .protocol.InternalTransaction internal_transactions = 17;</code>
+     */
+    private $internal_transactions;
     /**
      * Generated from protobuf field <code>int64 exchange_received_amount = 18;</code>
      */
@@ -82,18 +94,6 @@ class TransactionInfo extends \Google\Protobuf\Internal\Message
      */
     protected $orderId = '';
     /**
-     * Generated from protobuf field <code>repeated bytes contractResult = 5;</code>
-     */
-    private $contractResult;
-    /**
-     * Generated from protobuf field <code>repeated .protocol.TransactionInfo.Log log = 8;</code>
-     */
-    private $log;
-    /**
-     * Generated from protobuf field <code>repeated .protocol.InternalTransaction internal_transactions = 17;</code>
-     */
-    private $internal_transactions;
-    /**
      * Generated from protobuf field <code>repeated .protocol.MarketOrderDetail orderDetails = 26;</code>
      */
     private $orderDetails;
@@ -104,31 +104,30 @@ class TransactionInfo extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $id
-     * @type int|string $fee
-     * @type int|string $blockNumber
-     * @type int|string $blockTimeStamp
-     * @type string[]|\Google\Protobuf\Internal\RepeatedField $contractResult
-     * @type string $contract_address
-     * @type \Protocol\ResourceReceipt $receipt
-     * @type \Protocol\TransactionInfo\Log[]|\Google\Protobuf\Internal\RepeatedField $log
-     * @type int $result
-     * @type string $resMessage
-     * @type string $assetIssueID
-     * @type int|string $withdraw_amount
-     * @type int|string $unfreeze_amount
-     * @type \Protocol\InternalTransaction[]|\Google\Protobuf\Internal\RepeatedField $internal_transactions
-     * @type int|string $exchange_received_amount
-     * @type int|string $exchange_inject_another_amount
-     * @type int|string $exchange_withdraw_another_amount
-     * @type int|string $exchange_id
-     * @type int|string $shielded_transaction_fee
-     * @type string $orderId
-     * @type \Protocol\MarketOrderDetail[]|\Google\Protobuf\Internal\RepeatedField $orderDetails
+     *     @type string $id
+     *     @type int|string $fee
+     *     @type int|string $blockNumber
+     *     @type int|string $blockTimeStamp
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $contractResult
+     *     @type string $contract_address
+     *     @type \Protocol\ResourceReceipt $receipt
+     *     @type \Protocol\TransactionInfo\Log[]|\Google\Protobuf\Internal\RepeatedField $log
+     *     @type int $result
+     *     @type string $resMessage
+     *     @type string $assetIssueID
+     *     @type int|string $withdraw_amount
+     *     @type int|string $unfreeze_amount
+     *     @type \Protocol\InternalTransaction[]|\Google\Protobuf\Internal\RepeatedField $internal_transactions
+     *     @type int|string $exchange_received_amount
+     *     @type int|string $exchange_inject_another_amount
+     *     @type int|string $exchange_withdraw_another_amount
+     *     @type int|string $exchange_id
+     *     @type int|string $shielded_transaction_fee
+     *     @type string $orderId
+     *     @type \Protocol\MarketOrderDetail[]|\Google\Protobuf\Internal\RepeatedField $orderDetails
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -237,7 +236,7 @@ class TransactionInfo extends \Google\Protobuf\Internal\Message
      */
     public function setContractResult($var)
     {
-        $arr                  = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->contractResult = $arr;
 
         return $this;
@@ -274,6 +273,16 @@ class TransactionInfo extends \Google\Protobuf\Internal\Message
         return isset($this->receipt) ? $this->receipt : null;
     }
 
+    public function hasReceipt()
+    {
+        return isset($this->receipt);
+    }
+
+    public function clearReceipt()
+    {
+        unset($this->receipt);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.ResourceReceipt receipt = 7;</code>
      * @param \Protocol\ResourceReceipt $var
@@ -285,16 +294,6 @@ class TransactionInfo extends \Google\Protobuf\Internal\Message
         $this->receipt = $var;
 
         return $this;
-    }
-
-    public function hasReceipt()
-    {
-        return isset($this->receipt);
-    }
-
-    public function clearReceipt()
-    {
-        unset($this->receipt);
     }
 
     /**
@@ -313,7 +312,7 @@ class TransactionInfo extends \Google\Protobuf\Internal\Message
      */
     public function setLog($var)
     {
-        $arr       = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\TransactionInfo\Log::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\TransactionInfo\Log::class);
         $this->log = $arr;
 
         return $this;
@@ -445,7 +444,7 @@ class TransactionInfo extends \Google\Protobuf\Internal\Message
      */
     public function setInternalTransactions($var)
     {
-        $arr                         = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\InternalTransaction::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\InternalTransaction::class);
         $this->internal_transactions = $arr;
 
         return $this;
@@ -599,7 +598,7 @@ class TransactionInfo extends \Google\Protobuf\Internal\Message
      */
     public function setOrderDetails($var)
     {
-        $arr                = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\MarketOrderDetail::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\MarketOrderDetail::class);
         $this->orderDetails = $arr;
 
         return $this;

@@ -40,15 +40,14 @@ class Contract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $type
-     * @type \Google\Protobuf\Any $parameter
-     * @type string $provider
-     * @type string $ContractName
-     * @type int $Permission_id
+     *     @type int $type
+     *     @type \Google\Protobuf\Any $parameter
+     *     @type string $provider
+     *     @type string $ContractName
+     *     @type int $Permission_id
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -84,6 +83,16 @@ class Contract extends \Google\Protobuf\Internal\Message
         return isset($this->parameter) ? $this->parameter : null;
     }
 
+    public function hasParameter()
+    {
+        return isset($this->parameter);
+    }
+
+    public function clearParameter()
+    {
+        unset($this->parameter);
+    }
+
     /**
      * Generated from protobuf field <code>.google.protobuf.Any parameter = 2;</code>
      * @param \Google\Protobuf\Any $var
@@ -95,16 +104,6 @@ class Contract extends \Google\Protobuf\Internal\Message
         $this->parameter = $var;
 
         return $this;
-    }
-
-    public function hasParameter()
-    {
-        return isset($this->parameter);
-    }
-
-    public function clearParameter()
-    {
-        unset($this->parameter);
     }
 
     /**

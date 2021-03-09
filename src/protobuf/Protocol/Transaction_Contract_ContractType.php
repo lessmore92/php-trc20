@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\Transaction\Contract\ContractType instead.
      * @deprecated
      */
-    class Transaction_Contract_ContractType
-    {
-    }
+    class Transaction_Contract_ContractType {}
 }
 class_exists(Transaction\Contract\ContractType::class);
 @trigger_error('Protocol\Transaction_Contract_ContractType is deprecated and will be removed in the next major release. Use Protocol\Transaction\Contract\ContractType instead', E_USER_DEPRECATED);

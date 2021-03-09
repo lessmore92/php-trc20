@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class OutputPointInfo extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int32 block_num = 2;</code>
-     */
-    protected $block_num = 0;
-    /**
      * Generated from protobuf field <code>repeated .protocol.OutputPoint out_points = 1;</code>
      */
     private $out_points;
+    /**
+     * Generated from protobuf field <code>int32 block_num = 2;</code>
+     */
+    protected $block_num = 0;
 
     /**
      * Constructor.
@@ -28,12 +28,11 @@ class OutputPointInfo extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\OutputPoint[]|\Google\Protobuf\Internal\RepeatedField $out_points
-     * @type int $block_num
+     *     @type \Protocol\OutputPoint[]|\Google\Protobuf\Internal\RepeatedField $out_points
+     *     @type int $block_num
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\ShieldContract::initOnce();
         parent::__construct($data);
     }
@@ -54,7 +53,7 @@ class OutputPointInfo extends \Google\Protobuf\Internal\Message
      */
     public function setOutPoints($var)
     {
-        $arr              = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\OutputPoint::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\OutputPoint::class);
         $this->out_points = $arr;
 
         return $this;

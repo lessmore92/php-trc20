@@ -42,16 +42,15 @@ class MarketSellAssetContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
-     * @type string $sell_token_id
-     * @type int|string $sell_token_quantity
-     * @type string $buy_token_id
-     * @type int|string $buy_token_quantity
+     *     @type string $owner_address
+     *     @type string $sell_token_id
+     *     @type int|string $sell_token_quantity
+     *     @type string $buy_token_id
+     *     @type int|string $buy_token_quantity
      *           min to receive
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\MarketContract::initOnce();
         parent::__construct($data);
     }

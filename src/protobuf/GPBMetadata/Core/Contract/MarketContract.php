@@ -8,32 +8,27 @@ class MarketContract
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
+    public static function initOnce() {
         $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
-        if (static::$is_initialized == true)
-        {
-            return;
+        if (static::$is_initialized == true) {
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
-#core/contract/market_contract.protoprotocol"ï¿½
+Ý
+#core/contract/market_contract.protoprotocol"–
 MarketSellAssetContract
-
-owner_address (
-
-sell_token_id (
+owner_address (
+sell_token_id (
 sell_token_quantity (
 buy_token_id (
 buy_token_quantity ("D
 MarketCancelOrderContract
-
-owner_address (
+owner_address (
 order_id (BE
 org.tron.protos.contractZ)github.com/tronprotocol/grpc-gateway/corebproto3'
-            , true);
+        , true);
 
         static::$is_initialized = true;
     }

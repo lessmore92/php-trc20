@@ -33,6 +33,10 @@ class InternalTransaction extends \Google\Protobuf\Internal\Message
      */
     protected $transferTo_address = '';
     /**
+     * Generated from protobuf field <code>repeated .protocol.InternalTransaction.CallValueInfo callValueInfo = 4;</code>
+     */
+    private $callValueInfo;
+    /**
      * Generated from protobuf field <code>bytes note = 5;</code>
      */
     protected $note = '';
@@ -40,10 +44,6 @@ class InternalTransaction extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool rejected = 6;</code>
      */
     protected $rejected = false;
-    /**
-     * Generated from protobuf field <code>repeated .protocol.InternalTransaction.CallValueInfo callValueInfo = 4;</code>
-     */
-    private $callValueInfo;
 
     /**
      * Constructor.
@@ -51,20 +51,19 @@ class InternalTransaction extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $hash
+     *     @type string $hash
      *           internalTransaction identity, the root InternalTransaction hash
      *           should equals to root transaction id.
-     * @type string $caller_address
+     *     @type string $caller_address
      *           the one send trx (TBD: or token) via function
-     * @type string $transferTo_address
+     *     @type string $transferTo_address
      *           the one recieve trx (TBD: or token) via function
-     * @type \Protocol\InternalTransaction\CallValueInfo[]|\Google\Protobuf\Internal\RepeatedField $callValueInfo
-     * @type string $note
-     * @type bool $rejected
+     *     @type \Protocol\InternalTransaction\CallValueInfo[]|\Google\Protobuf\Internal\RepeatedField $callValueInfo
+     *     @type string $note
+     *     @type bool $rejected
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -165,7 +164,7 @@ class InternalTransaction extends \Google\Protobuf\Internal\Message
      */
     public function setCallValueInfo($var)
     {
-        $arr                 = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\InternalTransaction\CallValueInfo::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\InternalTransaction\CallValueInfo::class);
         $this->callValueInfo = $arr;
 
         return $this;

@@ -28,12 +28,11 @@ class TXInput extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\TXInput\raw $raw_data
-     * @type string $signature
+     *     @type \Protocol\TXInput\raw $raw_data
+     *     @type string $signature
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -47,6 +46,16 @@ class TXInput extends \Google\Protobuf\Internal\Message
         return isset($this->raw_data) ? $this->raw_data : null;
     }
 
+    public function hasRawData()
+    {
+        return isset($this->raw_data);
+    }
+
+    public function clearRawData()
+    {
+        unset($this->raw_data);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.TXInput.raw raw_data = 1;</code>
      * @param \Protocol\TXInput\raw $var
@@ -58,16 +67,6 @@ class TXInput extends \Google\Protobuf\Internal\Message
         $this->raw_data = $var;
 
         return $this;
-    }
-
-    public function hasRawData()
-    {
-        return isset($this->raw_data);
-    }
-
-    public function clearRawData()
-    {
-        unset($this->raw_data);
     }
 
     /**

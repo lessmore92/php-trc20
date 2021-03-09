@@ -8,46 +8,40 @@ class ExchangeContract
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
+    public static function initOnce() {
         $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
-        if (static::$is_initialized == true)
-        {
-            return;
+        if (static::$is_initialized == true) {
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
-%core/contract/exchange_contract.protoprotocol"ï¿½
+ì
+%core/contract/exchange_contract.protoprotocol"›
 ExchangeCreateContract
-
-owner_address (
+owner_address (
 first_token_id (
 first_token_balance (
 second_token_id (
 second_token_balance ("e
 ExchangeInjectContract
-
-owner_address (
+owner_address (
 exchange_id (
 token_id (
 quant ("g
 ExchangeWithdrawContract
-
-owner_address (
+owner_address (
 exchange_id (
 token_id (
 quant ("|
 ExchangeTransactionContract
-
-owner_address (
+owner_address (
 exchange_id (
 token_id (
 quant (
 expected (BE
 org.tron.protos.contractZ)github.com/tronprotocol/grpc-gateway/corebproto3'
-            , true);
+        , true);
 
         static::$is_initialized = true;
     }

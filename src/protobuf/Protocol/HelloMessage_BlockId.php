@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\HelloMessage\BlockId instead.
      * @deprecated
      */
-    class HelloMessage_BlockId
-    {
-    }
+    class HelloMessage_BlockId {}
 }
 class_exists(HelloMessage\BlockId::class);
 @trigger_error('Protocol\HelloMessage_BlockId is deprecated and will be removed in the next major release. Use Protocol\HelloMessage\BlockId instead', E_USER_DEPRECATED);

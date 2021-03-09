@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\NodeInfo\MachineInfo\DeadLockThreadInfo instead.
      * @deprecated
      */
-    class NodeInfo_MachineInfo_DeadLockThreadInfo
-    {
-    }
+    class NodeInfo_MachineInfo_DeadLockThreadInfo {}
 }
 class_exists(NodeInfo\MachineInfo\DeadLockThreadInfo::class);
 @trigger_error('Protocol\NodeInfo_MachineInfo_DeadLockThreadInfo is deprecated and will be removed in the next major release. Use Protocol\NodeInfo\MachineInfo\DeadLockThreadInfo instead', E_USER_DEPRECATED);

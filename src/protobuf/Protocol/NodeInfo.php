@@ -44,6 +44,10 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
      */
     protected $totalFlow = 0;
     /**
+     * Generated from protobuf field <code>repeated .protocol.NodeInfo.PeerInfo peerInfoList = 8;</code>
+     */
+    private $peerInfoList;
+    /**
      * Generated from protobuf field <code>.protocol.NodeInfo.ConfigNodeInfo configNodeInfo = 9;</code>
      */
     protected $configNodeInfo = null;
@@ -51,10 +55,6 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.protocol.NodeInfo.MachineInfo machineInfo = 10;</code>
      */
     protected $machineInfo = null;
-    /**
-     * Generated from protobuf field <code>repeated .protocol.NodeInfo.PeerInfo peerInfoList = 8;</code>
-     */
-    private $peerInfoList;
     /**
      * Generated from protobuf field <code>map<string, string> cheatWitnessInfoMap = 11;</code>
      */
@@ -66,22 +66,21 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int|string $beginSyncNum
-     * @type string $block
-     * @type string $solidityBlock
-     * @type int $currentConnectCount
+     *     @type int|string $beginSyncNum
+     *     @type string $block
+     *     @type string $solidityBlock
+     *     @type int $currentConnectCount
      *          connect information
-     * @type int $activeConnectCount
-     * @type int $passiveConnectCount
-     * @type int|string $totalFlow
-     * @type \Protocol\NodeInfo\PeerInfo[]|\Google\Protobuf\Internal\RepeatedField $peerInfoList
-     * @type \Protocol\NodeInfo\ConfigNodeInfo $configNodeInfo
-     * @type \Protocol\NodeInfo\MachineInfo $machineInfo
-     * @type array|\Google\Protobuf\Internal\MapField $cheatWitnessInfoMap
+     *     @type int $activeConnectCount
+     *     @type int $passiveConnectCount
+     *     @type int|string $totalFlow
+     *     @type \Protocol\NodeInfo\PeerInfo[]|\Google\Protobuf\Internal\RepeatedField $peerInfoList
+     *     @type \Protocol\NodeInfo\ConfigNodeInfo $configNodeInfo
+     *     @type \Protocol\NodeInfo\MachineInfo $machineInfo
+     *     @type array|\Google\Protobuf\Internal\MapField $cheatWitnessInfoMap
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -260,7 +259,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
      */
     public function setPeerInfoList($var)
     {
-        $arr                = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\NodeInfo\PeerInfo::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\NodeInfo\PeerInfo::class);
         $this->peerInfoList = $arr;
 
         return $this;
@@ -273,6 +272,16 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     public function getConfigNodeInfo()
     {
         return isset($this->configNodeInfo) ? $this->configNodeInfo : null;
+    }
+
+    public function hasConfigNodeInfo()
+    {
+        return isset($this->configNodeInfo);
+    }
+
+    public function clearConfigNodeInfo()
+    {
+        unset($this->configNodeInfo);
     }
 
     /**
@@ -288,16 +297,6 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
         return $this;
     }
 
-    public function hasConfigNodeInfo()
-    {
-        return isset($this->configNodeInfo);
-    }
-
-    public function clearConfigNodeInfo()
-    {
-        unset($this->configNodeInfo);
-    }
-
     /**
      * Generated from protobuf field <code>.protocol.NodeInfo.MachineInfo machineInfo = 10;</code>
      * @return \Protocol\NodeInfo\MachineInfo
@@ -305,6 +304,16 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     public function getMachineInfo()
     {
         return isset($this->machineInfo) ? $this->machineInfo : null;
+    }
+
+    public function hasMachineInfo()
+    {
+        return isset($this->machineInfo);
+    }
+
+    public function clearMachineInfo()
+    {
+        unset($this->machineInfo);
     }
 
     /**
@@ -318,16 +327,6 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
         $this->machineInfo = $var;
 
         return $this;
-    }
-
-    public function hasMachineInfo()
-    {
-        return isset($this->machineInfo);
-    }
-
-    public function clearMachineInfo()
-    {
-        unset($this->machineInfo);
     }
 
     /**
@@ -346,7 +345,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
      */
     public function setCheatWitnessInfoMap($var)
     {
-        $arr                       = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->cheatWitnessInfoMap = $arr;
 
         return $this;

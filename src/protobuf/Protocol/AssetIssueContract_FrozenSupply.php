@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\AssetIssueContract\FrozenSupply instead.
      * @deprecated
      */
-    class AssetIssueContract_FrozenSupply
-    {
-    }
+    class AssetIssueContract_FrozenSupply {}
 }
 class_exists(AssetIssueContract\FrozenSupply::class);
 @trigger_error('Protocol\AssetIssueContract_FrozenSupply is deprecated and will be removed in the next major release. Use Protocol\AssetIssueContract\FrozenSupply instead', E_USER_DEPRECATED);

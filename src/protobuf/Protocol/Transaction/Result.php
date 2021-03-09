@@ -64,21 +64,20 @@ class Result extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int|string $fee
-     * @type int $ret
-     * @type int $contractRet
-     * @type string $assetIssueID
-     * @type int|string $withdraw_amount
-     * @type int|string $unfreeze_amount
-     * @type int|string $exchange_received_amount
-     * @type int|string $exchange_inject_another_amount
-     * @type int|string $exchange_withdraw_another_amount
-     * @type int|string $exchange_id
-     * @type int|string $shielded_transaction_fee
+     *     @type int|string $fee
+     *     @type int $ret
+     *     @type int $contractRet
+     *     @type string $assetIssueID
+     *     @type int|string $withdraw_amount
+     *     @type int|string $unfreeze_amount
+     *     @type int|string $exchange_received_amount
+     *     @type int|string $exchange_inject_another_amount
+     *     @type int|string $exchange_withdraw_another_amount
+     *     @type int|string $exchange_id
+     *     @type int|string $shielded_transaction_fee
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }

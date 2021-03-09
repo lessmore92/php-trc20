@@ -30,11 +30,21 @@ class raw extends \Google\Protobuf\Internal\Message
      */
     protected $expiration = 0;
     /**
+     * Generated from protobuf field <code>repeated .protocol.authority auths = 9;</code>
+     */
+    private $auths;
+    /**
      * transaction note
      *
      * Generated from protobuf field <code>bytes data = 10;</code>
      */
     protected $data = '';
+    /**
+     *only support size = 1, repeated list here for extension
+     *
+     * Generated from protobuf field <code>repeated .protocol.Transaction.Contract contract = 11;</code>
+     */
+    private $contract;
     /**
      * scripts not used
      *
@@ -49,16 +59,6 @@ class raw extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 fee_limit = 18;</code>
      */
     protected $fee_limit = 0;
-    /**
-     * Generated from protobuf field <code>repeated .protocol.authority auths = 9;</code>
-     */
-    private $auths;
-    /**
-     *only support size = 1, repeated list here for extension
-     *
-     * Generated from protobuf field <code>repeated .protocol.Transaction.Contract contract = 11;</code>
-     */
-    private $contract;
 
     /**
      * Constructor.
@@ -66,23 +66,22 @@ class raw extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $ref_block_bytes
-     * @type int|string $ref_block_num
-     * @type string $ref_block_hash
-     * @type int|string $expiration
-     * @type \Protocol\authority[]|\Google\Protobuf\Internal\RepeatedField $auths
-     * @type string $data
+     *     @type string $ref_block_bytes
+     *     @type int|string $ref_block_num
+     *     @type string $ref_block_hash
+     *     @type int|string $expiration
+     *     @type \Protocol\authority[]|\Google\Protobuf\Internal\RepeatedField $auths
+     *     @type string $data
      *           transaction note
-     * @type \Protocol\Transaction\Contract[]|\Google\Protobuf\Internal\RepeatedField $contract
+     *     @type \Protocol\Transaction\Contract[]|\Google\Protobuf\Internal\RepeatedField $contract
      *          only support size = 1, repeated list here for extension
-     * @type string $scripts
+     *     @type string $scripts
      *           scripts not used
-     * @type int|string $timestamp
-     * @type int|string $fee_limit
+     *     @type int|string $timestamp
+     *     @type int|string $fee_limit
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -191,7 +190,7 @@ class raw extends \Google\Protobuf\Internal\Message
      */
     public function setAuths($var)
     {
-        $arr         = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\authority::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\authority::class);
         $this->auths = $arr;
 
         return $this;
@@ -243,7 +242,7 @@ class raw extends \Google\Protobuf\Internal\Message
      */
     public function setContract($var)
     {
-        $arr            = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Transaction\Contract::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Transaction\Contract::class);
         $this->contract = $arr;
 
         return $this;

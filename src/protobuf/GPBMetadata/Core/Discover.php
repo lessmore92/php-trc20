@@ -8,17 +8,15 @@ class Discover
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
+    public static function initOnce() {
         $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
-        if (static::$is_initialized == true)
-        {
-            return;
+        if (static::$is_initialized == true) {
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+æ
 core/Discover.protoprotocol"9
 Endpoint
 address (
@@ -43,12 +41,11 @@ Neighbours
 
 neighbours (2.protocol.Endpoint
 	timestamp ("/
-
-BackupMessage
+BackupMessage
 flag (
 priority (BF
 org.tron.protosBDiscoverZ)github.com/tronprotocol/grpc-gateway/corebproto3'
-            , true);
+        , true);
 
         static::$is_initialized = true;
     }

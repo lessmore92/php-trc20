@@ -34,13 +34,12 @@ class Votes extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $address
-     * @type \Protocol\Vote[]|\Google\Protobuf\Internal\RepeatedField $old_votes
-     * @type \Protocol\Vote[]|\Google\Protobuf\Internal\RepeatedField $new_votes
+     *     @type string $address
+     *     @type \Protocol\Vote[]|\Google\Protobuf\Internal\RepeatedField $old_votes
+     *     @type \Protocol\Vote[]|\Google\Protobuf\Internal\RepeatedField $new_votes
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -83,7 +82,7 @@ class Votes extends \Google\Protobuf\Internal\Message
      */
     public function setOldVotes($var)
     {
-        $arr             = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Vote::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Vote::class);
         $this->old_votes = $arr;
 
         return $this;
@@ -105,7 +104,7 @@ class Votes extends \Google\Protobuf\Internal\Message
      */
     public function setNewVotes($var)
     {
-        $arr             = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Vote::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Vote::class);
         $this->new_votes = $arr;
 
         return $this;

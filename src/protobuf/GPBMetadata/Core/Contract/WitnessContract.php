@@ -8,30 +8,25 @@ class WitnessContract
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
+    public static function initOnce() {
         $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
-        if (static::$is_initialized == true)
-        {
-            return;
+        if (static::$is_initialized == true) {
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+¥
 $core/contract/witness_contract.protoprotocol";
 WitnessCreateContract
-
-owner_address (
+owner_address (
 url ("B
 WitnessUpdateContract
+owner_address (
 
-owner_address (
-
-update_url ("ï¿½
+update_url ("¢
 VoteWitnessContract
-
-owner_address (1
+owner_address (1
 votes (2".protocol.VoteWitnessContract.Vote
 support (0
 Vote
@@ -39,7 +34,7 @@ owner_address (1
 
 vote_count (BE
 org.tron.protos.contractZ)github.com/tronprotocol/grpc-gateway/corebproto3'
-            , true);
+        , true);
 
         static::$is_initialized = true;
     }

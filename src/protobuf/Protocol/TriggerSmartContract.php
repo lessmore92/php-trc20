@@ -44,16 +44,15 @@ class TriggerSmartContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
-     * @type string $contract_address
-     * @type int|string $call_value
-     * @type string $data
-     * @type int|string $call_token_value
-     * @type int|string $token_id
+     *     @type string $owner_address
+     *     @type string $contract_address
+     *     @type int|string $call_value
+     *     @type string $data
+     *     @type int|string $call_token_value
+     *     @type int|string $token_id
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\SmartContract::initOnce();
         parent::__construct($data);
     }

@@ -24,11 +24,10 @@ class AuthenticationPath extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type bool[]|\Google\Protobuf\Internal\RepeatedField $value
+     *     @type bool[]|\Google\Protobuf\Internal\RepeatedField $value
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\ShieldContract::initOnce();
         parent::__construct($data);
     }
@@ -49,7 +48,7 @@ class AuthenticationPath extends \Google\Protobuf\Internal\Message
      */
     public function setValue($var)
     {
-        $arr         = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BOOL);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BOOL);
         $this->value = $arr;
 
         return $this;

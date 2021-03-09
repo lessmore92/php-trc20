@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\Items\ItemType instead.
      * @deprecated
      */
-    class Items_ItemType
-    {
-    }
+    class Items_ItemType {}
 }
 class_exists(Items\ItemType::class);
 @trigger_error('Protocol\Items_ItemType is deprecated and will be removed in the next major release. Use Protocol\Items\ItemType instead', E_USER_DEPRECATED);

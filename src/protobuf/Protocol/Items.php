@@ -36,14 +36,13 @@ class Items extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $type
-     * @type \Protocol\Block[]|\Google\Protobuf\Internal\RepeatedField $blocks
-     * @type \Protocol\BlockHeader[]|\Google\Protobuf\Internal\RepeatedField $block_headers
-     * @type \Protocol\Transaction[]|\Google\Protobuf\Internal\RepeatedField $transactions
+     *     @type int $type
+     *     @type \Protocol\Block[]|\Google\Protobuf\Internal\RepeatedField $blocks
+     *     @type \Protocol\BlockHeader[]|\Google\Protobuf\Internal\RepeatedField $block_headers
+     *     @type \Protocol\Transaction[]|\Google\Protobuf\Internal\RepeatedField $transactions
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -86,7 +85,7 @@ class Items extends \Google\Protobuf\Internal\Message
      */
     public function setBlocks($var)
     {
-        $arr          = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Block::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Block::class);
         $this->blocks = $arr;
 
         return $this;
@@ -108,7 +107,7 @@ class Items extends \Google\Protobuf\Internal\Message
      */
     public function setBlockHeaders($var)
     {
-        $arr                 = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\BlockHeader::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\BlockHeader::class);
         $this->block_headers = $arr;
 
         return $this;
@@ -130,7 +129,7 @@ class Items extends \Google\Protobuf\Internal\Message
      */
     public function setTransactions($var)
     {
-        $arr                = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Transaction::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Transaction::class);
         $this->transactions = $arr;
 
         return $this;

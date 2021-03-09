@@ -73,29 +73,28 @@ class contractResult
     const TRANSFER_FAILED = 14;
 
     private static $valueToName = [
-        self::PBDEFAULT            => 'PBDEFAULT',
-        self::SUCCESS              => 'SUCCESS',
-        self::REVERT               => 'REVERT',
+        self::PBDEFAULT => 'PBDEFAULT',
+        self::SUCCESS => 'SUCCESS',
+        self::REVERT => 'REVERT',
         self::BAD_JUMP_DESTINATION => 'BAD_JUMP_DESTINATION',
-        self::OUT_OF_MEMORY        => 'OUT_OF_MEMORY',
+        self::OUT_OF_MEMORY => 'OUT_OF_MEMORY',
         self::PRECOMPILED_CONTRACT => 'PRECOMPILED_CONTRACT',
-        self::STACK_TOO_SMALL      => 'STACK_TOO_SMALL',
-        self::STACK_TOO_LARGE      => 'STACK_TOO_LARGE',
-        self::ILLEGAL_OPERATION    => 'ILLEGAL_OPERATION',
-        self::STACK_OVERFLOW       => 'STACK_OVERFLOW',
-        self::OUT_OF_ENERGY        => 'OUT_OF_ENERGY',
-        self::OUT_OF_TIME          => 'OUT_OF_TIME',
-        self::JVM_STACK_OVER_FLOW  => 'JVM_STACK_OVER_FLOW',
-        self::UNKNOWN              => 'UNKNOWN',
-        self::TRANSFER_FAILED      => 'TRANSFER_FAILED',
+        self::STACK_TOO_SMALL => 'STACK_TOO_SMALL',
+        self::STACK_TOO_LARGE => 'STACK_TOO_LARGE',
+        self::ILLEGAL_OPERATION => 'ILLEGAL_OPERATION',
+        self::STACK_OVERFLOW => 'STACK_OVERFLOW',
+        self::OUT_OF_ENERGY => 'OUT_OF_ENERGY',
+        self::OUT_OF_TIME => 'OUT_OF_TIME',
+        self::JVM_STACK_OVER_FLOW => 'JVM_STACK_OVER_FLOW',
+        self::UNKNOWN => 'UNKNOWN',
+        self::TRANSFER_FAILED => 'TRANSFER_FAILED',
     ];
 
     public static function name($value)
     {
-        if (!isset(self::$valueToName[$value]))
-        {
+        if (!isset(self::$valueToName[$value])) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no name defined for value %s', __CLASS__, $value));
+                    'Enum %s has no name defined for value %s', __CLASS__, $value));
         }
         return self::$valueToName[$value];
     }
@@ -104,10 +103,9 @@ class contractResult
     public static function value($name)
     {
         $const = __CLASS__ . '::' . strtoupper($name);
-        if (!defined($const))
-        {
+        if (!defined($const)) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no value defined for name %s', __CLASS__, $name));
+                    'Enum %s has no value defined for name %s', __CLASS__, $name));
         }
         return constant($const);
     }

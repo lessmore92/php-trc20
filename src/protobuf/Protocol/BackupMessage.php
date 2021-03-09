@@ -28,12 +28,11 @@ class BackupMessage extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type bool $flag
-     * @type int $priority
+     *     @type bool $flag
+     *     @type int $priority
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Discover::initOnce();
         parent::__construct($data);
     }

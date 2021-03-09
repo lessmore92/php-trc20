@@ -40,15 +40,14 @@ class MemoryDescInfo extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $name
-     * @type int|string $initSize
-     * @type int|string $useSize
-     * @type int|string $maxSize
-     * @type float $useRate
+     *     @type string $name
+     *     @type int|string $initSize
+     *     @type int|string $useSize
+     *     @type int|string $maxSize
+     *     @type float $useRate
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }

@@ -4,15 +4,12 @@
 
 namespace Protocol;
 
-if (false)
-{
+if (false) {
     /**
      * This class is deprecated. Use Protocol\Transaction\raw instead.
      * @deprecated
      */
-    class Transaction_raw
-    {
-    }
+    class Transaction_raw {}
 }
 class_exists(Transaction\raw::class);
 @trigger_error('Protocol\Transaction_raw is deprecated and will be removed in the next major release. Use Protocol\Transaction\raw instead', E_USER_DEPRECATED);

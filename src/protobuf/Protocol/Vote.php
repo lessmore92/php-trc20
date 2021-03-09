@@ -34,14 +34,13 @@ class Vote extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $vote_address
+     *     @type string $vote_address
      *           the super rep address
-     * @type int|string $vote_count
+     *     @type int|string $vote_count
      *           the vote num to this super rep.
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }

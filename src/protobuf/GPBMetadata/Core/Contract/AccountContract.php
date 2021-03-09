@@ -8,41 +8,35 @@ class AccountContract
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
+    public static function initOnce() {
         $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
-        if (static::$is_initialized == true)
-        {
-            return;
+        if (static::$is_initialized == true) {
+          return;
         }
         \GPBMetadata\Core\Tron::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+¤
 $core/contract/account_contract.protoprotocol"l
 AccountCreateContract
-
-owner_address (
+owner_address (
 account_address (#
 type (2.protocol.AccountType"D
 AccountUpdateContract
 account_name (
-
-owner_address ("A
+owner_address ("A
 SetAccountIdContract
 
 account_id (
-
-owner_address ("ï¿½
+owner_address ("«
 AccountPermissionUpdateContract
-
-owner_address (#
+owner_address (#
 owner (2.protocol.Permission%
 witness (2.protocol.Permission%
 actives (2.protocol.PermissionBE
 org.tron.protos.contractZ)github.com/tronprotocol/grpc-gateway/corebproto3'
-            , true);
+        , true);
 
         static::$is_initialized = true;
     }

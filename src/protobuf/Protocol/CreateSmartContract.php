@@ -36,14 +36,13 @@ class CreateSmartContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
-     * @type \Protocol\SmartContract $new_contract
-     * @type int|string $call_token_value
-     * @type int|string $token_id
+     *     @type string $owner_address
+     *     @type \Protocol\SmartContract $new_contract
+     *     @type int|string $call_token_value
+     *     @type int|string $token_id
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\SmartContract::initOnce();
         parent::__construct($data);
     }
@@ -79,6 +78,16 @@ class CreateSmartContract extends \Google\Protobuf\Internal\Message
         return isset($this->new_contract) ? $this->new_contract : null;
     }
 
+    public function hasNewContract()
+    {
+        return isset($this->new_contract);
+    }
+
+    public function clearNewContract()
+    {
+        unset($this->new_contract);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.SmartContract new_contract = 2;</code>
      * @param \Protocol\SmartContract $var
@@ -90,16 +99,6 @@ class CreateSmartContract extends \Google\Protobuf\Internal\Message
         $this->new_contract = $var;
 
         return $this;
-    }
-
-    public function hasNewContract()
-    {
-        return isset($this->new_contract);
-    }
-
-    public function clearNewContract()
-    {
-        unset($this->new_contract);
     }
 
     /**

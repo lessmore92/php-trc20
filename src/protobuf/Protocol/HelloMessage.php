@@ -44,16 +44,15 @@ class HelloMessage extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\Endpoint $from
-     * @type int $version
-     * @type int|string $timestamp
-     * @type \Protocol\HelloMessage\BlockId $genesisBlockId
-     * @type \Protocol\HelloMessage\BlockId $solidBlockId
-     * @type \Protocol\HelloMessage\BlockId $headBlockId
+     *     @type \Protocol\Endpoint $from
+     *     @type int $version
+     *     @type int|string $timestamp
+     *     @type \Protocol\HelloMessage\BlockId $genesisBlockId
+     *     @type \Protocol\HelloMessage\BlockId $solidBlockId
+     *     @type \Protocol\HelloMessage\BlockId $headBlockId
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -67,6 +66,16 @@ class HelloMessage extends \Google\Protobuf\Internal\Message
         return isset($this->from) ? $this->from : null;
     }
 
+    public function hasFrom()
+    {
+        return isset($this->from);
+    }
+
+    public function clearFrom()
+    {
+        unset($this->from);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.Endpoint from = 1;</code>
      * @param \Protocol\Endpoint $var
@@ -78,16 +87,6 @@ class HelloMessage extends \Google\Protobuf\Internal\Message
         $this->from = $var;
 
         return $this;
-    }
-
-    public function hasFrom()
-    {
-        return isset($this->from);
-    }
-
-    public function clearFrom()
-    {
-        unset($this->from);
     }
 
     /**
@@ -143,6 +142,16 @@ class HelloMessage extends \Google\Protobuf\Internal\Message
         return isset($this->genesisBlockId) ? $this->genesisBlockId : null;
     }
 
+    public function hasGenesisBlockId()
+    {
+        return isset($this->genesisBlockId);
+    }
+
+    public function clearGenesisBlockId()
+    {
+        unset($this->genesisBlockId);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.HelloMessage.BlockId genesisBlockId = 4;</code>
      * @param \Protocol\HelloMessage\BlockId $var
@@ -156,16 +165,6 @@ class HelloMessage extends \Google\Protobuf\Internal\Message
         return $this;
     }
 
-    public function hasGenesisBlockId()
-    {
-        return isset($this->genesisBlockId);
-    }
-
-    public function clearGenesisBlockId()
-    {
-        unset($this->genesisBlockId);
-    }
-
     /**
      * Generated from protobuf field <code>.protocol.HelloMessage.BlockId solidBlockId = 5;</code>
      * @return \Protocol\HelloMessage\BlockId
@@ -173,6 +172,16 @@ class HelloMessage extends \Google\Protobuf\Internal\Message
     public function getSolidBlockId()
     {
         return isset($this->solidBlockId) ? $this->solidBlockId : null;
+    }
+
+    public function hasSolidBlockId()
+    {
+        return isset($this->solidBlockId);
+    }
+
+    public function clearSolidBlockId()
+    {
+        unset($this->solidBlockId);
     }
 
     /**
@@ -188,16 +197,6 @@ class HelloMessage extends \Google\Protobuf\Internal\Message
         return $this;
     }
 
-    public function hasSolidBlockId()
-    {
-        return isset($this->solidBlockId);
-    }
-
-    public function clearSolidBlockId()
-    {
-        unset($this->solidBlockId);
-    }
-
     /**
      * Generated from protobuf field <code>.protocol.HelloMessage.BlockId headBlockId = 6;</code>
      * @return \Protocol\HelloMessage\BlockId
@@ -205,6 +204,16 @@ class HelloMessage extends \Google\Protobuf\Internal\Message
     public function getHeadBlockId()
     {
         return isset($this->headBlockId) ? $this->headBlockId : null;
+    }
+
+    public function hasHeadBlockId()
+    {
+        return isset($this->headBlockId);
+    }
+
+    public function clearHeadBlockId()
+    {
+        unset($this->headBlockId);
     }
 
     /**
@@ -218,16 +227,6 @@ class HelloMessage extends \Google\Protobuf\Internal\Message
         $this->headBlockId = $var;
 
         return $this;
-    }
-
-    public function hasHeadBlockId()
-    {
-        return isset($this->headBlockId);
-    }
-
-    public function clearHeadBlockId()
-    {
-        unset($this->headBlockId);
     }
 
 }

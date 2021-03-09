@@ -28,12 +28,11 @@ class SmartContractDataWrapper extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\SmartContract $smart_contract
-     * @type string $runtimecode
+     *     @type \Protocol\SmartContract $smart_contract
+     *     @type string $runtimecode
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\SmartContract::initOnce();
         parent::__construct($data);
     }
@@ -47,6 +46,16 @@ class SmartContractDataWrapper extends \Google\Protobuf\Internal\Message
         return isset($this->smart_contract) ? $this->smart_contract : null;
     }
 
+    public function hasSmartContract()
+    {
+        return isset($this->smart_contract);
+    }
+
+    public function clearSmartContract()
+    {
+        unset($this->smart_contract);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.SmartContract smart_contract = 1;</code>
      * @param \Protocol\SmartContract $var
@@ -58,16 +67,6 @@ class SmartContractDataWrapper extends \Google\Protobuf\Internal\Message
         $this->smart_contract = $var;
 
         return $this;
-    }
-
-    public function hasSmartContract()
-    {
-        return isset($this->smart_contract);
-    }
-
-    public function clearSmartContract()
-    {
-        unset($this->smart_contract);
     }
 
     /**

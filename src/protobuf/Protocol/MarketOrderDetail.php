@@ -36,14 +36,13 @@ class MarketOrderDetail extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $makerOrderId
-     * @type string $takerOrderId
-     * @type int|string $fillSellQuantity
-     * @type int|string $fillBuyQuantity
+     *     @type string $makerOrderId
+     *     @type string $takerOrderId
+     *     @type int|string $fillSellQuantity
+     *     @type int|string $fillBuyQuantity
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }

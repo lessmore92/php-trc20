@@ -48,17 +48,16 @@ class ResourceReceipt extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int|string $energy_usage
-     * @type int|string $energy_fee
-     * @type int|string $origin_energy_usage
-     * @type int|string $energy_usage_total
-     * @type int|string $net_usage
-     * @type int|string $net_fee
-     * @type int $result
+     *     @type int|string $energy_usage
+     *     @type int|string $energy_fee
+     *     @type int|string $origin_energy_usage
+     *     @type int|string $energy_usage_total
+     *     @type int|string $net_usage
+     *     @type int|string $net_fee
+     *     @type int $result
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }

@@ -72,23 +72,22 @@ class MachineInfo extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $threadCount
-     * @type int $deadLockThreadCount
-     * @type int $cpuCount
-     * @type int|string $totalMemory
-     * @type int|string $freeMemory
-     * @type float $cpuRate
-     * @type string $javaVersion
-     * @type string $osName
-     * @type int|string $jvmTotalMemoery
-     * @type int|string $jvmFreeMemory
-     * @type float $processCpuRate
-     * @type \Protocol\NodeInfo\MachineInfo\MemoryDescInfo[]|\Google\Protobuf\Internal\RepeatedField $memoryDescInfoList
-     * @type \Protocol\NodeInfo\MachineInfo\DeadLockThreadInfo[]|\Google\Protobuf\Internal\RepeatedField $deadLockThreadInfoList
+     *     @type int $threadCount
+     *     @type int $deadLockThreadCount
+     *     @type int $cpuCount
+     *     @type int|string $totalMemory
+     *     @type int|string $freeMemory
+     *     @type float $cpuRate
+     *     @type string $javaVersion
+     *     @type string $osName
+     *     @type int|string $jvmTotalMemoery
+     *     @type int|string $jvmFreeMemory
+     *     @type float $processCpuRate
+     *     @type \Protocol\NodeInfo\MachineInfo\MemoryDescInfo[]|\Google\Protobuf\Internal\RepeatedField $memoryDescInfoList
+     *     @type \Protocol\NodeInfo\MachineInfo\DeadLockThreadInfo[]|\Google\Protobuf\Internal\RepeatedField $deadLockThreadInfoList
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -351,7 +350,7 @@ class MachineInfo extends \Google\Protobuf\Internal\Message
      */
     public function setMemoryDescInfoList($var)
     {
-        $arr                      = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\NodeInfo\MachineInfo\MemoryDescInfo::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\NodeInfo\MachineInfo\MemoryDescInfo::class);
         $this->memoryDescInfoList = $arr;
 
         return $this;
@@ -373,7 +372,7 @@ class MachineInfo extends \Google\Protobuf\Internal\Message
      */
     public function setDeadLockThreadInfoList($var)
     {
-        $arr                          = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\NodeInfo\MachineInfo\DeadLockThreadInfo::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\NodeInfo\MachineInfo\DeadLockThreadInfo::class);
         $this->deadLockThreadInfoList = $arr;
 
         return $this;

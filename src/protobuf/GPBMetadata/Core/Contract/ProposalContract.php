@@ -8,37 +8,32 @@ class ProposalContract
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
+    public static function initOnce() {
         $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
-        if (static::$is_initialized == true)
-        {
-            return;
+        if (static::$is_initialized == true) {
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+Ñ
 %core/contract/proposal_contract.protoprotocol"^
 ProposalApproveContract
-
-owner_address (
+owner_address (
 proposal_id (
-is_add_approval ("ï¿½
+is_add_approval ("¨
 ProposalCreateContract
-
-owner_address (D
+owner_address (D
 
 parameters (20.protocol.ProposalCreateContract.ParametersEntry1
 ParametersEntry
 key (
 value (:8"D
 ProposalDeleteContract
-
-owner_address (
+owner_address (
 proposal_id (BE
 org.tron.protos.contractZ)github.com/tronprotocol/grpc-gateway/corebproto3'
-            , true);
+        , true);
 
         static::$is_initialized = true;
     }

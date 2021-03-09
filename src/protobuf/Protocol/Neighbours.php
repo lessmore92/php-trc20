@@ -18,13 +18,13 @@ class Neighbours extends \Google\Protobuf\Internal\Message
      */
     protected $from = null;
     /**
-     * Generated from protobuf field <code>int64 timestamp = 3;</code>
-     */
-    protected $timestamp = 0;
-    /**
      * Generated from protobuf field <code>repeated .protocol.Endpoint neighbours = 2;</code>
      */
     private $neighbours;
+    /**
+     * Generated from protobuf field <code>int64 timestamp = 3;</code>
+     */
+    protected $timestamp = 0;
 
     /**
      * Constructor.
@@ -32,13 +32,12 @@ class Neighbours extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\Endpoint $from
-     * @type \Protocol\Endpoint[]|\Google\Protobuf\Internal\RepeatedField $neighbours
-     * @type int|string $timestamp
+     *     @type \Protocol\Endpoint $from
+     *     @type \Protocol\Endpoint[]|\Google\Protobuf\Internal\RepeatedField $neighbours
+     *     @type int|string $timestamp
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Discover::initOnce();
         parent::__construct($data);
     }
@@ -52,6 +51,16 @@ class Neighbours extends \Google\Protobuf\Internal\Message
         return isset($this->from) ? $this->from : null;
     }
 
+    public function hasFrom()
+    {
+        return isset($this->from);
+    }
+
+    public function clearFrom()
+    {
+        unset($this->from);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.Endpoint from = 1;</code>
      * @param \Protocol\Endpoint $var
@@ -63,16 +72,6 @@ class Neighbours extends \Google\Protobuf\Internal\Message
         $this->from = $var;
 
         return $this;
-    }
-
-    public function hasFrom()
-    {
-        return isset($this->from);
-    }
-
-    public function clearFrom()
-    {
-        unset($this->from);
     }
 
     /**
@@ -91,7 +90,7 @@ class Neighbours extends \Google\Protobuf\Internal\Message
      */
     public function setNeighbours($var)
     {
-        $arr              = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Endpoint::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\Endpoint::class);
         $this->neighbours = $arr;
 
         return $this;

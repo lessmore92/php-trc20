@@ -32,13 +32,12 @@ class DelegatedResourceAccountIndex extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $account
-     * @type string[]|\Google\Protobuf\Internal\RepeatedField $fromAccounts
-     * @type string[]|\Google\Protobuf\Internal\RepeatedField $toAccounts
+     *     @type string $account
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $fromAccounts
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $toAccounts
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -81,7 +80,7 @@ class DelegatedResourceAccountIndex extends \Google\Protobuf\Internal\Message
      */
     public function setFromAccounts($var)
     {
-        $arr                = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->fromAccounts = $arr;
 
         return $this;
@@ -103,7 +102,7 @@ class DelegatedResourceAccountIndex extends \Google\Protobuf\Internal\Message
      */
     public function setToAccounts($var)
     {
-        $arr              = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->toAccounts = $arr;
 
         return $this;

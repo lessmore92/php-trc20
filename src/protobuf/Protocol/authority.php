@@ -28,12 +28,11 @@ class authority extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type \Protocol\AccountId $account
-     * @type string $permission_name
+     *     @type \Protocol\AccountId $account
+     *     @type string $permission_name
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }
@@ -47,6 +46,16 @@ class authority extends \Google\Protobuf\Internal\Message
         return isset($this->account) ? $this->account : null;
     }
 
+    public function hasAccount()
+    {
+        return isset($this->account);
+    }
+
+    public function clearAccount()
+    {
+        unset($this->account);
+    }
+
     /**
      * Generated from protobuf field <code>.protocol.AccountId account = 1;</code>
      * @param \Protocol\AccountId $var
@@ -58,16 +67,6 @@ class authority extends \Google\Protobuf\Internal\Message
         $this->account = $var;
 
         return $this;
-    }
-
-    public function hasAccount()
-    {
-        return isset($this->account);
-    }
-
-    public function clearAccount()
-    {
-        unset($this->account);
     }
 
     /**

@@ -75,25 +75,24 @@ class MarketOrder extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $order_id
-     * @type string $owner_address
-     * @type int|string $create_time
-     * @type string $sell_token_id
-     * @type int|string $sell_token_quantity
-     * @type string $buy_token_id
-     * @type int|string $buy_token_quantity
+     *     @type string $order_id
+     *     @type string $owner_address
+     *     @type int|string $create_time
+     *     @type string $sell_token_id
+     *     @type int|string $sell_token_quantity
+     *     @type string $buy_token_id
+     *     @type int|string $buy_token_quantity
      *           min to receive
-     * @type int|string $sell_token_quantity_remain
-     * @type int|string $sell_token_quantity_return
+     *     @type int|string $sell_token_quantity_remain
+     *     @type int|string $sell_token_quantity_return
      *           When state != ACTIVE and sell_token_quantity_return !=0,
      *          it means that some sell tokens are returned to the account due to insufficient remaining amount
-     * @type int $state
-     * @type string $prev
-     * @type string $next
+     *     @type int $state
+     *     @type string $prev
+     *     @type string $next
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }

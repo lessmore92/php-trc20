@@ -34,6 +34,10 @@ class AssetIssueContract extends \Google\Protobuf\Internal\Message
      */
     protected $total_supply = 0;
     /**
+     * Generated from protobuf field <code>repeated .protocol.AssetIssueContract.FrozenSupply frozen_supply = 5;</code>
+     */
+    private $frozen_supply;
+    /**
      * Generated from protobuf field <code>int32 trx_num = 6;</code>
      */
     protected $trx_num = 0;
@@ -87,10 +91,6 @@ class AssetIssueContract extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 public_latest_free_net_time = 25;</code>
      */
     protected $public_latest_free_net_time = 0;
-    /**
-     * Generated from protobuf field <code>repeated .protocol.AssetIssueContract.FrozenSupply frozen_supply = 5;</code>
-     */
-    private $frozen_supply;
 
     /**
      * Constructor.
@@ -98,30 +98,29 @@ class AssetIssueContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $id
-     * @type string $owner_address
-     * @type string $name
-     * @type string $abbr
-     * @type int|string $total_supply
-     * @type \Protocol\AssetIssueContract\FrozenSupply[]|\Google\Protobuf\Internal\RepeatedField $frozen_supply
-     * @type int $trx_num
-     * @type int $precision
-     * @type int $num
-     * @type int|string $start_time
-     * @type int|string $end_time
-     * @type int|string $order
+     *     @type string $id
+     *     @type string $owner_address
+     *     @type string $name
+     *     @type string $abbr
+     *     @type int|string $total_supply
+     *     @type \Protocol\AssetIssueContract\FrozenSupply[]|\Google\Protobuf\Internal\RepeatedField $frozen_supply
+     *     @type int $trx_num
+     *     @type int $precision
+     *     @type int $num
+     *     @type int|string $start_time
+     *     @type int|string $end_time
+     *     @type int|string $order
      *           useless
-     * @type int $vote_score
-     * @type string $description
-     * @type string $url
-     * @type int|string $free_asset_net_limit
-     * @type int|string $public_free_asset_net_limit
-     * @type int|string $public_free_asset_net_usage
-     * @type int|string $public_latest_free_net_time
+     *     @type int $vote_score
+     *     @type string $description
+     *     @type string $url
+     *     @type int|string $free_asset_net_limit
+     *     @type int|string $public_free_asset_net_limit
+     *     @type int|string $public_free_asset_net_usage
+     *     @type int|string $public_latest_free_net_time
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\AssetIssueContract::initOnce();
         parent::__construct($data);
     }
@@ -252,7 +251,7 @@ class AssetIssueContract extends \Google\Protobuf\Internal\Message
      */
     public function setFrozenSupply($var)
     {
-        $arr                 = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\AssetIssueContract\FrozenSupply::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Protocol\AssetIssueContract\FrozenSupply::class);
         $this->frozen_supply = $arr;
 
         return $this;

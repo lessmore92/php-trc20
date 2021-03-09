@@ -44,16 +44,15 @@ class DelegatedResource extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $from
-     * @type string $to
-     * @type int|string $frozen_balance_for_bandwidth
-     * @type int|string $frozen_balance_for_energy
-     * @type int|string $expire_time_for_bandwidth
-     * @type int|string $expire_time_for_energy
+     *     @type string $from
+     *     @type string $to
+     *     @type int|string $frozen_balance_for_bandwidth
+     *     @type int|string $frozen_balance_for_energy
+     *     @type int|string $expire_time_for_bandwidth
+     *     @type int|string $expire_time_for_energy
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Tron::initOnce();
         parent::__construct($data);
     }

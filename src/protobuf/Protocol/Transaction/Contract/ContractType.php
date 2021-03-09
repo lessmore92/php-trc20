@@ -153,49 +153,48 @@ class ContractType
     const MarketCancelOrderContract = 53;
 
     private static $valueToName = [
-        self::AccountCreateContract           => 'AccountCreateContract',
-        self::TransferContract                => 'TransferContract',
-        self::TransferAssetContract           => 'TransferAssetContract',
-        self::VoteAssetContract               => 'VoteAssetContract',
-        self::VoteWitnessContract             => 'VoteWitnessContract',
-        self::WitnessCreateContract           => 'WitnessCreateContract',
-        self::AssetIssueContract              => 'AssetIssueContract',
-        self::WitnessUpdateContract           => 'WitnessUpdateContract',
-        self::ParticipateAssetIssueContract   => 'ParticipateAssetIssueContract',
-        self::AccountUpdateContract           => 'AccountUpdateContract',
-        self::FreezeBalanceContract           => 'FreezeBalanceContract',
-        self::UnfreezeBalanceContract         => 'UnfreezeBalanceContract',
-        self::WithdrawBalanceContract         => 'WithdrawBalanceContract',
-        self::UnfreezeAssetContract           => 'UnfreezeAssetContract',
-        self::UpdateAssetContract             => 'UpdateAssetContract',
-        self::ProposalCreateContract          => 'ProposalCreateContract',
-        self::ProposalApproveContract         => 'ProposalApproveContract',
-        self::ProposalDeleteContract          => 'ProposalDeleteContract',
-        self::SetAccountIdContract            => 'SetAccountIdContract',
-        self::CustomContract                  => 'CustomContract',
-        self::CreateSmartContract             => 'CreateSmartContract',
-        self::TriggerSmartContract            => 'TriggerSmartContract',
-        self::GetContract                     => 'GetContract',
-        self::UpdateSettingContract           => 'UpdateSettingContract',
-        self::ExchangeCreateContract          => 'ExchangeCreateContract',
-        self::ExchangeInjectContract          => 'ExchangeInjectContract',
-        self::ExchangeWithdrawContract        => 'ExchangeWithdrawContract',
-        self::ExchangeTransactionContract     => 'ExchangeTransactionContract',
-        self::UpdateEnergyLimitContract       => 'UpdateEnergyLimitContract',
+        self::AccountCreateContract => 'AccountCreateContract',
+        self::TransferContract => 'TransferContract',
+        self::TransferAssetContract => 'TransferAssetContract',
+        self::VoteAssetContract => 'VoteAssetContract',
+        self::VoteWitnessContract => 'VoteWitnessContract',
+        self::WitnessCreateContract => 'WitnessCreateContract',
+        self::AssetIssueContract => 'AssetIssueContract',
+        self::WitnessUpdateContract => 'WitnessUpdateContract',
+        self::ParticipateAssetIssueContract => 'ParticipateAssetIssueContract',
+        self::AccountUpdateContract => 'AccountUpdateContract',
+        self::FreezeBalanceContract => 'FreezeBalanceContract',
+        self::UnfreezeBalanceContract => 'UnfreezeBalanceContract',
+        self::WithdrawBalanceContract => 'WithdrawBalanceContract',
+        self::UnfreezeAssetContract => 'UnfreezeAssetContract',
+        self::UpdateAssetContract => 'UpdateAssetContract',
+        self::ProposalCreateContract => 'ProposalCreateContract',
+        self::ProposalApproveContract => 'ProposalApproveContract',
+        self::ProposalDeleteContract => 'ProposalDeleteContract',
+        self::SetAccountIdContract => 'SetAccountIdContract',
+        self::CustomContract => 'CustomContract',
+        self::CreateSmartContract => 'CreateSmartContract',
+        self::TriggerSmartContract => 'TriggerSmartContract',
+        self::GetContract => 'GetContract',
+        self::UpdateSettingContract => 'UpdateSettingContract',
+        self::ExchangeCreateContract => 'ExchangeCreateContract',
+        self::ExchangeInjectContract => 'ExchangeInjectContract',
+        self::ExchangeWithdrawContract => 'ExchangeWithdrawContract',
+        self::ExchangeTransactionContract => 'ExchangeTransactionContract',
+        self::UpdateEnergyLimitContract => 'UpdateEnergyLimitContract',
         self::AccountPermissionUpdateContract => 'AccountPermissionUpdateContract',
-        self::ClearABIContract                => 'ClearABIContract',
-        self::UpdateBrokerageContract         => 'UpdateBrokerageContract',
-        self::ShieldedTransferContract        => 'ShieldedTransferContract',
-        self::MarketSellAssetContract         => 'MarketSellAssetContract',
-        self::MarketCancelOrderContract       => 'MarketCancelOrderContract',
+        self::ClearABIContract => 'ClearABIContract',
+        self::UpdateBrokerageContract => 'UpdateBrokerageContract',
+        self::ShieldedTransferContract => 'ShieldedTransferContract',
+        self::MarketSellAssetContract => 'MarketSellAssetContract',
+        self::MarketCancelOrderContract => 'MarketCancelOrderContract',
     ];
 
     public static function name($value)
     {
-        if (!isset(self::$valueToName[$value]))
-        {
+        if (!isset(self::$valueToName[$value])) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no name defined for value %s', __CLASS__, $value));
+                    'Enum %s has no name defined for value %s', __CLASS__, $value));
         }
         return self::$valueToName[$value];
     }
@@ -204,10 +203,9 @@ class ContractType
     public static function value($name)
     {
         $const = __CLASS__ . '::' . strtoupper($name);
-        if (!defined($const))
-        {
+        if (!defined($const)) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no value defined for name %s', __CLASS__, $name));
+                    'Enum %s has no value defined for name %s', __CLASS__, $name));
         }
         return constant($const);
     }

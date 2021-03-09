@@ -28,12 +28,11 @@ class SellStorageContract extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $owner_address
-     * @type int|string $storage_bytes
+     *     @type string $owner_address
+     *     @type int|string $storage_bytes
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Contract\StorageContract::initOnce();
         parent::__construct($data);
     }
