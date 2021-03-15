@@ -9,14 +9,12 @@
     }
   ],
   "require": {
-    "lessmore92/tron-api": "dev-main",
-    "google/protobuf": "^3.15"
+    "lessmore92/tron-api": "dev-main"
   },
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "Lessmore92\\Tron\\": "src",
-      "": "src/protobuf"
+      "Lessmore92\\Tron\\": "src"
     },
     "files": [
       "src/utils.php"

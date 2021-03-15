@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4316c8074822612d1ac4de2f0ff8f72b",
+    "content-hash": "8a864da131543559c1025a79e0b1c628",
     "packages": [
         {
             "name": "fgrosse/phpasn1",
@@ -80,51 +80,6 @@
                 "source": "https://github.com/fgrosse/PHPASN1/tree/v2.2.0"
             },
             "time": "2020-10-11T16:28:18+00:00"
-        },
-        {
-            "name": "google/protobuf",
-            "version": "v3.15.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "c4a8128a7df155fce4faba3087b27dcdfe3ece2e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/c4a8128a7df155fce4faba3087b27dcdfe3ece2e",
-                "reference": "c4a8128a7df155fce4faba3087b27dcdfe3ece2e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": ">=4.8.0"
-            },
-            "suggest": {
-                "ext-bcmath": "Need to support JSON deserialization"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Google\\Protobuf\\": "src/Google/Protobuf",
-                    "GPBMetadata\\Google\\Protobuf\\": "src/GPBMetadata/Google/Protobuf"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "proto library for PHP",
-            "homepage": "https://developers.google.com/protocol-buffers/",
-            "keywords": [
-                "proto"
-            ],
-            "support": {
-                "issues": "https://github.com/protocolbuffers/protobuf-php/issues",
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.15.5"
-            },
-            "time": "2021-03-05T01:43:13+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -281,12 +236,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "64245c4a03d43ddb638c4ff0b2d330c2af726ec5"
+                "reference": "a67cdbf85690e54a7b92fe91c297b20d2607c0b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/64245c4a03d43ddb638c4ff0b2d330c2af726ec5",
-                "reference": "64245c4a03d43ddb638c4ff0b2d330c2af726ec5",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/a67cdbf85690e54a7b92fe91c297b20d2607c0b2",
+                "reference": "a67cdbf85690e54a7b92fe91c297b20d2607c0b2",
                 "shasum": ""
             },
             "require": {
@@ -348,62 +303,7 @@
                 "issues": "https://github.com/guzzle/psr7/issues",
                 "source": "https://github.com/guzzle/psr7/tree/1.x"
             },
-            "time": "2021-03-07T16:17:45+00:00"
-        },
-        {
-            "name": "iexbase/tron-api",
-            "version": "v3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/iexbase/tron-api.git",
-                "reference": "0b286ea0fec5222e35e8a7fb32924f5de93f3500"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/iexbase/tron-api/zipball/0b286ea0fec5222e35e8a7fb32924f5de93f3500",
-                "reference": "0b286ea0fec5222e35e8a7fb32924f5de93f3500",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.3 | ^7.0",
-                "kornrunner/secp256k1": "^0.1.2",
-                "php": "^7.1",
-                "sc0vu/web3.php": "^0.1.4",
-                "simplito/elliptic-php": "^1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "IEXBase\\TronAPI\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Shamsudin Serderov",
-                    "email": "steein.shamsudin@gmail.com"
-                }
-            ],
-            "description": "A PHP API for interacting with Tron (Trx)",
-            "homepage": "https://github.com/iexbase/tron-api",
-            "keywords": [
-                "iexbase",
-                "tron-api",
-                "tron-lib",
-                "tron-php",
-                "tron-rest-api"
-            ],
-            "support": {
-                "issues": "https://github.com/iexbase/tron-api/issues",
-                "source": "https://github.com/iexbase/tron-api/tree/v3.0"
-            },
-            "time": "2020-09-23T14:15:08+00:00"
+            "time": "2021-03-15T11:15:53+00:00"
         },
         {
             "name": "kornrunner/keccak",
@@ -506,6 +406,61 @@
             "time": "2019-01-16T17:01:51+00:00"
         },
         {
+            "name": "lessmore92/tron-api",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lessmore92/tron-api.git",
+                "reference": "cffba96fbba463cad673a3dec22363de1465aa22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lessmore92/tron-api/zipball/cffba96fbba463cad673a3dec22363de1465aa22",
+                "reference": "cffba96fbba463cad673a3dec22363de1465aa22",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.3",
+                "kornrunner/secp256k1": "^0.1.2",
+                "php": "^7.2",
+                "sc0vu/web3.php": "dev-master",
+                "simplito/elliptic-php": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "IEXBase\\TronAPI\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shamsudin Serderov",
+                    "email": "steein.shamsudin@gmail.com"
+                }
+            ],
+            "description": "A PHP API for interacting with Tron (Trx)",
+            "homepage": "https://github.com/iexbase/tron-api",
+            "keywords": [
+                "tron-api",
+                "tron-lib",
+                "tron-php",
+                "tron-rest-api"
+            ],
+            "support": {
+                "issues": "https://github.com/lessmore92/tron-api/issues",
+                "source": "https://github.com/lessmore92/tron-api/tree/main"
+            },
+            "time": "2021-03-10T00:07:07+00:00"
+        },
+        {
             "name": "mdanter/ecc",
             "version": "0.5.x-dev",
             "source": {
@@ -587,12 +542,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "aac5b0a74c368c701b4e32d667600771a6f99641"
+                "reference": "cf8d62500bd869eca939553918e50f35baffd413"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/aac5b0a74c368c701b4e32d667600771a6f99641",
-                "reference": "aac5b0a74c368c701b4e32d667600771a6f99641",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/cf8d62500bd869eca939553918e50f35baffd413",
+                "reference": "cf8d62500bd869eca939553918e50f35baffd413",
                 "shasum": ""
             },
             "require": {
@@ -688,7 +643,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-26T15:17:52+00:00"
+            "time": "2021-03-09T05:04:21+00:00"
         },
         {
             "name": "psr/http-message",
@@ -790,19 +745,20 @@
         },
         {
             "name": "sc0vu/web3.php",
-            "version": "0.1.4",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sc0Vu/web3.php.git",
-                "reference": "1fb7762eb7763b0ccdbac1483819606e9edc6a49"
+                "reference": "d69ce96a646df1bd07e3f21879ce25c114d21634"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sc0Vu/web3.php/zipball/1fb7762eb7763b0ccdbac1483819606e9edc6a49",
-                "reference": "1fb7762eb7763b0ccdbac1483819606e9edc6a49",
+                "url": "https://api.github.com/repos/sc0Vu/web3.php/zipball/d69ce96a646df1bd07e3f21879ce25c114d21634",
+                "reference": "d69ce96a646df1bd07e3f21879ce25c114d21634",
                 "shasum": ""
             },
             "require": {
+                "ext-mbstring": "*",
                 "guzzlehttp/guzzle": "~6.0",
                 "kornrunner/keccak": "~1.0",
                 "php": "^7.1",
@@ -811,6 +767,7 @@
             "require-dev": {
                 "phpunit/phpunit": "~6.0"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -832,7 +789,7 @@
                 "issues": "https://github.com/sc0Vu/web3.php/issues",
                 "source": "https://github.com/sc0Vu/web3.php/tree/master"
             },
-            "time": "2018-06-24T14:45:20+00:00"
+            "time": "2019-10-03T14:41:19+00:00"
         },
         {
             "name": "simplito/bigint-wrapper-php",
@@ -1315,7 +1272,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "lessmore92/tron-api": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

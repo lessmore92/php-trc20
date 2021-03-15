@@ -8,18 +8,7 @@
 namespace Lessmore92\Tron;
 
 use Exception;
-use Google\Protobuf\Any;
-use IEXBase\TronAPI\Support;
 use IEXBase\TronAPI\Tron;
-use Protocol\Transaction;
-use Protocol\Transaction\Contract;
-use Protocol\Transaction\Contract\ContractType;
-use Protocol\Transaction\Raw;
-use Protocol\TriggerSmartContract;
-use Web3\Contracts\Ethabi;
-use Web3\Contracts\Types\
-{Address, Boolean, Bytes, DynamicBytes, Integer, Str, Uinteger
-};
 
 abstract class StandardTRC20Token
 {
@@ -108,6 +97,7 @@ abstract class StandardTRC20Token
         return $balance;
     }
 
+    /*
     public function transfer($from, $to, $amount, $private)
     {
         $feeLimitInSun = bcmul($this->feeLimit, $this::TRX_TO_SUN);
@@ -174,7 +164,7 @@ abstract class StandardTRC20Token
         $raw->setContract([$contract]);
         $raw->setFeeLimit($feeLimitInSun);
 
-        $blockHeightIn64bits = str_pad(dechex($blockHeight), 8 * 2 /* 8 bytes = 16 hex chars*/, "0", STR_PAD_LEFT);
+        $blockHeightIn64bits = str_pad(dechex($blockHeight), 8 * 2 /* 8 bytes = 16 hex chars*, "0", STR_PAD_LEFT);
 
         $raw->setRefBlockBytes(hex2Str($refBlockBytes = substr($blockHeightIn64bits, 12, 4)));
         $raw->setRefBlockHash(hex2Str($refBlockHash = substr($blockHash, 16, 16)));
@@ -191,6 +181,20 @@ abstract class StandardTRC20Token
         return $this->api->getManager()
                          ->request("wallet/broadcasthex", ["transaction" => str2hex($tx->serializeToString())], "post")
             ;
+    }
+    */
+
+    public function transfer($from, $to, $amount, $private)
+    {
+        $feeLimitInSun = bcmul($this->feeLimit, $this::TRX_TO_SUN);
+        $tokenAmount   = bcmul($amount, bcpow("10", $this->decimals(), 0), 0);
+        $this->api->setPrivateKey($private);
+        $transaction       = $this->api->getTransactionBuilder()
+                                       ->triggerSmartContract($this->abi, $this->api->toHex($this->contract), 'transfer', [$this->api->toHex($to), $tokenAmount], $feeLimitInSun, $this->api->toHex($from))
+        ;
+        $signedTransaction = $this->api->signTransaction($transaction);
+        $this->api->setPrivateKey('');
+        return $this->api->sendRawTransaction($signedTransaction);
     }
 
     public function getTransactions(string $address, $limit = 100)
